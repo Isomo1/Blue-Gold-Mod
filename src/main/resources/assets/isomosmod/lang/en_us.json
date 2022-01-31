@@ -1,5 +1,7 @@
 {
   "item.isomosmod.blue_gold_ingot": "Blue Gold Ingot",
   "item.isomosmod.blue_gold_nugget": "Blue Gold Nugget",
-  "item.isomosmod.raw_blue_gold": "Raw Blue Gold"
+  "item.isomosmod.raw_blue_gold": "Raw Blue Gold",
+  "block.isomosmod.blue_gold_block": "Blue Gold Block",
+  "itemGroup.isomosmod.blue_gold": "Blue Gold"
 }
