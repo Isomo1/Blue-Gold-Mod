@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.isomo.isomosmod.IsomosMod;
 import net.isomo.isomosmod.item.ModItemGroup;
-import net.isomo.isomosmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
