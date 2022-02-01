@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "isomosmod:blue_gold_block",
+    "isomosmod:blue_gold_ore",
+    "isomosmod:deepslate_blue_gold_ore",
+    "isomosmod:nether_blue_gold_ore",
+    "isomosmod:raw_blue_gold_block"
+  ]
+}
