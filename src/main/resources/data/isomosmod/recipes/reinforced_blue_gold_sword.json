@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "Y",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_block"
+    },
+    "Y": {
+      "item": "minecraft:netherite_block"
+    },
+    "X": {
+      "item": "isomosmod:blue_gold_block"
+    }
+  },
+  "result": {
+    "item": "isomosmod:reinforced_blue_gold_sword"
+  }
+}

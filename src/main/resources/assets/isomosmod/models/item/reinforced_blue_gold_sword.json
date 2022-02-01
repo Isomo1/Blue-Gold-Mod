@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "isomosmod:item/reinforced_blue_gold_sword"
+  }
+}
