@@ -22,6 +22,9 @@ public class ModItems {
     public static final Item RAW_BLUE_GOLD = registerItem("raw_blue_gold",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
+    public static final Item IRON_STICK = registerItem("iron_stick",
+            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
     public static final Item BLUE_GOLD_SWORD = registerItem("blue_gold_sword",
             new SwordItem(ModToolMaterial.BLUE_GOLD,3,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
