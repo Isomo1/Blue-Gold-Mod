@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "X#",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "bluegoldmod:iron_stick"
+    },
+    "X": {
+      "item": "bluegoldmod:blue_gold_ingot"
+    }
+  },
+  "result": {
+    "item": "bluegoldmod:blue_gold_axe"
+  }
+}

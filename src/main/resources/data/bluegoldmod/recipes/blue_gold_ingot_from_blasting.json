@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "bluegoldmod:reinforced_blue_gold_sword"
+    }
+  ],
+
+  "result": "bluegoldmod:blue_gold_ingot",
+  "experience": 0.9,
+  "cookingtime": 100
+}

@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "isomosmod",
+  "id": "bluegoldmod",
   "version": "${version}",
 
   "name": "Blue Gold",
   "description": "A mod that adds blue gold tools, armors and gadgets!",
   "authors": [
-    "Isomo"
+    "Isomo (Coding), DarkChar (Sprites)"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -19,11 +19,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.isomo.isomosmod.IsomosMod"
+      "net.isomo.bluegoldmod.BlueGoldMod"
     ]
   },
   "mixins": [
-    "isomosmod.mixins.json"
+    "bluegoldmod.mixins.json"
   ],
 
   "depends": {

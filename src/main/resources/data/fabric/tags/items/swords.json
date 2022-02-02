@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "isomosmod:blue_gold_sword",
-    "isomosmod:reinforced_blue_gold_sword"
+    "bluegoldmod:blue_gold_sword",
+    "bluegoldmod:reinforced_blue_gold_sword"
   ]
 }

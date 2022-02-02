@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "isomosmod:block/blue_gold_block"
-  }
-}

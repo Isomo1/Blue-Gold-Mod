@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blue_gold_ingot",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "bluegoldmod:blue_gold_nugget"
+    }
+  },
+  "result": {
+    "item": "bluegoldmod:blue_gold_ingot"
+  }
+}

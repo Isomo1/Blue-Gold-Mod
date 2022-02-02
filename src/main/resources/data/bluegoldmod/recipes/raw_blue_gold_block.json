@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "bluegoldmod:raw_blue_gold"
+    }
+  },
+  "result": {
+    "item": "bluegoldmod:raw_blue_gold_block"
+  }
+}

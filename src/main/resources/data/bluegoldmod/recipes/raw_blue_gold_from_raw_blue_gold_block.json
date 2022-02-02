@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bluegoldmod:raw_blue_gold_block"
+    }
+  ],
+  "result": {
+    "item": "bluegoldmod:raw_blue_gold",
+    "count": 9
+  }
+}
