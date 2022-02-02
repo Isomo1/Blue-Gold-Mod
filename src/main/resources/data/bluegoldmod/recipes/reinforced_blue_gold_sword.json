@@ -1,18 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "X",
-    "Y",
-    "#"
+    "  X",
+    "ZY ",
+    "#Z "
   ],
   "key": {
     "#": {
-      "item": "bluegoldmod:iron_handle"
+      "tag": "c:iron_handle"
     },
-    "Y": {
-      "item": "minecraft:netherite_block"
+    "Z": {
+      "item": "minecraft:iron_ingot"
     },
     "X": {
+      "item": "minecraft:netherite_block"
+    },
+    "Y": {
       "item": "bluegoldmod:blue_gold_block"
     }
   },

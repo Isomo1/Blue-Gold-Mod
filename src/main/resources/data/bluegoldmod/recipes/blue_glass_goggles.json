@@ -3,14 +3,17 @@
   "pattern": [
     "XXX",
     "YXY",
-    "XXX"
+    "XZX"
   ],
   "key": {
     "X": {
-      "item": "bluegoldmod:blue_gold_ingot"
+      "item": "minecraft:leather"
     },
     "Y": {
-      "item": "bluegoldmod:blue_glass"
+      "tag": "c:blue_glass"
+    },
+    "Z": {
+      "item": "minecraft:gold_nugget"
     }
   },
   "result": {

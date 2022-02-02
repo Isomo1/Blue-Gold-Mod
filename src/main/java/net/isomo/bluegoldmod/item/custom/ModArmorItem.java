@@ -55,7 +55,7 @@ public class ModArmorItem extends ArmorItem{
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 800));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 700));
         }
     }
 

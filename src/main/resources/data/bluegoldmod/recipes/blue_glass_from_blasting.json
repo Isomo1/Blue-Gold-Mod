@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "bluegoldmod:blue_gold_ingot"
+    }
+  ],
+
+  "result": "bluegoldmod:blue_glass",
+  "experience": 2,
+  "cookingtime": 100
+}

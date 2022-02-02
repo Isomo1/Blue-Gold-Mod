@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "tag": "c:iron_handle"
+    }
+  ],
+
+  "result": "minecraft:iron_nugget",
+  "experience": 0.7,
+  "cookingtime": 100
+}
