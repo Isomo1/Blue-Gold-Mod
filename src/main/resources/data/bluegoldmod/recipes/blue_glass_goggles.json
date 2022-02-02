@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "YXY",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "bluegoldmod:blue_gold_ingot"
+    },
+    "Y": {
+      "item": "bluegoldmod:blue_glass"
+    }
+  },
+  "result": {
+    "item": "bluegoldmod:blue_glass_goggles"
+  }
+}

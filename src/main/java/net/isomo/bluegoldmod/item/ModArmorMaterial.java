@@ -12,6 +12,9 @@ import java.util.function.Supplier;
 public enum ModArmorMaterial implements ArmorMaterial {
     BLUE_GOLD("blue_gold", 24, new int[]{2, 5, 7, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F, 1.0F, () -> {
         return Ingredient.ofItems(ModItems.BLUE_GOLD_INGOT);
+    }),
+    BLUE_GLASS("blue_glass", 24, new int[]{0, 0, 0, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F, 0.0F, () -> {
+        return Ingredient.ofItems(ModItems.BLUE_GLASS);
     });
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};

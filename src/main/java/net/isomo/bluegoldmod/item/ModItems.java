@@ -2,6 +2,7 @@ package net.isomo.bluegoldmod.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.isomo.bluegoldmod.BlueGoldMod;
+import net.isomo.bluegoldmod.item.custom.ModArmorItem;
 import net.isomo.bluegoldmod.item.custom.ModAxeItem;
 import net.isomo.bluegoldmod.item.custom.ModHoeItem;
 import net.isomo.bluegoldmod.item.custom.ModPickaxeItem;
@@ -27,6 +28,9 @@ public class ModItems {
     public static final Item IRON_HANDLE = registerItem("iron_handle",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
+    public static final Item BLUE_GLASS = registerItem("blue_glass",
+            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
     public static final Item BLUE_GOLD_SWORD = registerItem("blue_gold_sword",
             new SwordItem(ModToolMaterial.BLUE_GOLD,3,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
@@ -44,6 +48,9 @@ public class ModItems {
 
     public static final Item BLUE_GOLD_HOE = registerItem("blue_gold_hoe",
             new ModHoeItem(ModToolMaterial.BLUE_GOLD,-2,-0.5f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item BLUE_GLASS_GOGGLES = registerItem("blue_glass_goggles",
+            new ModArmorItem(ModArmorMaterial.BLUE_GLASS, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_HELMET = registerItem("blue_gold_helmet",
             new ArmorItem(ModArmorMaterial.BLUE_GOLD, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));

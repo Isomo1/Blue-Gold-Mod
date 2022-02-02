@@ -10,6 +10,9 @@ public enum ModToolMaterial implements ToolMaterial {
 
     BLUE_GOLD(2, 905, 7.0F, 2.5F, 15, () -> {
         return Ingredient.ofItems(ModItems.BLUE_GOLD_INGOT);
+    }),
+    BLUE_GLASS(0, 250, 0.0F, 0.0F, 0, () -> {
+        return Ingredient.ofItems(ModItems.BLUE_GLASS);
     });
 
     private final int miningLevel;
