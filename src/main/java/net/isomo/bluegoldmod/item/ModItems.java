@@ -5,6 +5,8 @@ import net.isomo.bluegoldmod.BlueGoldMod;
 import net.isomo.bluegoldmod.item.custom.ModAxeItem;
 import net.isomo.bluegoldmod.item.custom.ModHoeItem;
 import net.isomo.bluegoldmod.item.custom.ModPickaxeItem;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
@@ -22,7 +24,7 @@ public class ModItems {
     public static final Item RAW_BLUE_GOLD = registerItem("raw_blue_gold",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item IRON_STICK = registerItem("iron_stick",
+    public static final Item IRON_HANDLE = registerItem("iron_handle",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_SWORD = registerItem("blue_gold_sword",
@@ -42,6 +44,19 @@ public class ModItems {
 
     public static final Item BLUE_GOLD_HOE = registerItem("blue_gold_hoe",
             new ModHoeItem(ModToolMaterial.BLUE_GOLD,-2,-0.5f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item BLUE_GOLD_HELMET = registerItem("blue_gold_helmet",
+            new ArmorItem(ModArmorMaterial.BLUE_GOLD, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item BLUE_GOLD_CHESTPLATE = registerItem("blue_gold_chestplate",
+            new ArmorItem(ModArmorMaterial.BLUE_GOLD, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item BLUE_GOLD_LEGGINGS = registerItem("blue_gold_leggings",
+            new ArmorItem(ModArmorMaterial.BLUE_GOLD, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item BLUE_GOLD_BOOTS = registerItem("blue_gold_boots",
+            new ArmorItem(ModArmorMaterial.BLUE_GOLD, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registry.ITEM, new Identifier(BlueGoldMod.MOD_ID, name), item);

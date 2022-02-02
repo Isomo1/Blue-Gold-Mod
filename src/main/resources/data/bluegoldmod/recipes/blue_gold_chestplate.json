@@ -1,19 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XX",
-    " #",
-    " #"
+    "X X",
+    "XXX",
+    "XXX"
   ],
   "key": {
-    "#": {
-      "item": "bluegoldmod:iron_handle"
-    },
     "X": {
       "item": "bluegoldmod:blue_gold_ingot"
     }
   },
   "result": {
-    "item": "bluegoldmod:blue_gold_hoe"
+    "item": "bluegoldmod:blue_gold_chestplate"
   }
 }
