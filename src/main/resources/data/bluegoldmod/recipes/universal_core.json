@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#Y#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "c:blue_glass"
+    },
+    "Y": {
+      "item": "bluegoldmod:reactive_netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "bluegoldmod:universal_core"
+  }
+}

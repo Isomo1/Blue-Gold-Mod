@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "bluegoldmod:blue_gold_sword",
-    "bluegoldmod:reinforced_blue_gold_sword"
+    "bluegoldmod:reinforced_blue_gold_sword",
+    "bluegoldmod:reinforced_sword_handle"
   ]
 }

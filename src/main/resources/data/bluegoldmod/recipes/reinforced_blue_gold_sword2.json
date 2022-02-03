@@ -10,10 +10,10 @@
       "item": "bluegoldmod:reinforced_sword_handle"
     },
     "X": {
-      "item": "bluegoldmod:reactive_netherite_block"
+      "item": "bluegoldmod:blue_gold_block"
     },
     "Y": {
-      "item": "bluegoldmod:blue_gold_block"
+      "item": "bluegoldmod:reactive_netherite_block"
     }
   },
   "result": {

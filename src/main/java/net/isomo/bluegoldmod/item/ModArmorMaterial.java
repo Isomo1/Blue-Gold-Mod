@@ -10,10 +10,13 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements ArmorMaterial {
-    BLUE_GOLD("blue_gold", 24, new int[]{2, 5, 7, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F, 1.0F, () -> {
+    BLUE_GOLD("blue_gold", 24, new int[]{2, 5, 7, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.BLUE_GOLD_INGOT);
     }),
-    BLUE_GLASS("blue_glass", 24, new int[]{0, 0, 0, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F, 0.0F, () -> {
+    REINFORCED_BLUE_GOLD("reinforced_blue_gold", 42, new int[]{4, 7, 9, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 1.0F, 0.0F, () -> {
+        return Ingredient.ofItems(ModItems.REACTIVE_NETHERITE_INGOT);
+    }),
+    BLUE_GLASS("blue_glass", 24, new int[]{0, 0, 0, 1}, 5, SoundEvents.ITEM_SPYGLASS_USE, 1.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.BLUE_GLASS);
     });
 

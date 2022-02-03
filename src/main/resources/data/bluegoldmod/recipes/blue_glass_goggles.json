@@ -7,7 +7,7 @@
   ],
   "key": {
     "X": {
-      "item": "minecraft:leather"
+      "tag": "c:leather_strips"
     },
     "Y": {
       "tag": "c:blue_glass"

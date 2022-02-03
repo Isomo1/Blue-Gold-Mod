@@ -29,11 +29,12 @@ public class ModArmorItem extends ArmorItem{
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if(!world.isClient()) {
-            if(entity instanceof PlayerEntity) {
-                PlayerEntity player = (PlayerEntity)entity;
+            if(entity instanceof PlayerEntity player) {
 
                 if(hasHelmetOn(player)) {
                     evaluateArmorEffects(player);
+                } else if(!hasHelmetOn(player) && hasEffectOn(player)){
+                    player.removeStatusEffect(StatusEffects.NIGHT_VISION);
                 }
             }
         }
@@ -58,8 +59,12 @@ public class ModArmorItem extends ArmorItem{
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200,0,false,false));
         }
+    }
+
+    private boolean hasEffectOn(PlayerEntity player) {
+        return player.hasStatusEffect(StatusEffects.NIGHT_VISION);
     }
 
     private void removeStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffect mapStatusEffect) {

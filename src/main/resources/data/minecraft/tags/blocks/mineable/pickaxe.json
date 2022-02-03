@@ -5,6 +5,7 @@
     "bluegoldmod:blue_gold_ore",
     "bluegoldmod:deepslate_blue_gold_ore",
     "bluegoldmod:nether_blue_gold_ore",
-    "bluegoldmod:raw_blue_gold_block"
+    "bluegoldmod:raw_blue_gold_block",
+    "bluegoldmod:reactive_netherite_block"
   ]
 }
