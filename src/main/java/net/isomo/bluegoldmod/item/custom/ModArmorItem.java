@@ -16,6 +16,7 @@ import net.minecraft.world.World;
 import java.util.Map;
 
 public class ModArmorItem extends ArmorItem{
+
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
                     .put(ModArmorMaterial.BLUE_GLASS, StatusEffects.NIGHT_VISION).build();
@@ -47,6 +48,8 @@ public class ModArmorItem extends ArmorItem{
 
             if(hasCorrectArmorOn(mapArmorMaterial, player)) {
                 addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
+            }else if(!hasCorrectArmorOn(mapArmorMaterial, player)) {
+                removeStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
             }
         }
     }
@@ -55,8 +58,15 @@ public class ModArmorItem extends ArmorItem{
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 700));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200));
         }
+    }
+
+    private void removeStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffect mapStatusEffect) {
+        boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
+
+        if(!hasCorrectArmorOn(mapArmorMaterial, player) && hasPlayerEffect) {
+            player.removeStatusEffect(mapStatusEffect);}
     }
 
     private boolean hasHelmetOn(PlayerEntity player) {

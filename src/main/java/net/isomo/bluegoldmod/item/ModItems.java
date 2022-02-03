@@ -35,7 +35,7 @@ public class ModItems {
             new SwordItem(ModToolMaterial.BLUE_GOLD,3,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_SWORD = registerItem("reinforced_blue_gold_sword",
-            new SwordItem(ModToolMaterial.BLUE_GOLD,9,-0.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new SwordItem(ModToolMaterial.BLUE_GOLD,14,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_SHOVEL = registerItem("blue_gold_shovel",
             new ShovelItem(ModToolMaterial.BLUE_GOLD,1.5f,-3.0f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
