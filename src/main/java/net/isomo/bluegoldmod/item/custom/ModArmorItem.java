@@ -64,6 +64,7 @@ public class ModArmorItem extends ArmorItem{
     }
 
     private boolean hasEffectOn(PlayerEntity player) {
+
         return player.hasStatusEffect(StatusEffects.NIGHT_VISION);
     }
 

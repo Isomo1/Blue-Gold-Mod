@@ -29,7 +29,7 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_SWORD_HANDLE = registerItem("reinforced_sword_handle",
-            new SwordItem(ModToolMaterial.REACTIVE_NETHERITE,-5,-2.6f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item LEATHER_STRIPS = registerItem("leather_strips",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
