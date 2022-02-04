@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "bluegoldmod:blue_gold_hoe"
+    "bluegoldmod:blue_gold_hoe",
+    "bluegoldmod:reinforced_blue_gold_hoe"
   ]
 }

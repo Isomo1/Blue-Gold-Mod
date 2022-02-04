@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "bluegoldmod:blue_gold_shovel"
+    "bluegoldmod:blue_gold_shovel",
+    "bluegoldmod:reinforced_blue_gold_shovel"
   ]
 }

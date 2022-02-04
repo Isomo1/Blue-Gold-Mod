@@ -11,7 +11,10 @@ public enum ModToolMaterial implements ToolMaterial {
     BLUE_GOLD(2, 905, 7.0F, 2.5F, 12, () -> {
         return Ingredient.ofItems(ModItems.BLUE_GOLD_INGOT);
     }),
-    REACTIVE_NETHERITE(4, 2561, 20.0F, 5.0F, 18, () -> {
+    REACTIVE_NETHERITE(4, 2561, 18.5F, 5.0F, 18, () -> {
+        return Ingredient.ofItems(ModItems.REACTIVE_NETHERITE_INGOT);
+    }),
+    REACTIVE_NETHERITE_2(4, 2561, 20F, 5.0F, 18, () -> {
         return Ingredient.ofItems(ModItems.REACTIVE_NETHERITE_INGOT);
     }),
     BLUE_GLASS(0, 250, 0.0F, 0.0F, 0, () -> {
