@@ -2,10 +2,7 @@ package net.isomo.bluegoldmod.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.isomo.bluegoldmod.BlueGoldMod;
-import net.isomo.bluegoldmod.item.custom.ModArmorItem;
-import net.isomo.bluegoldmod.item.custom.ModAxeItem;
-import net.isomo.bluegoldmod.item.custom.ModHoeItem;
-import net.isomo.bluegoldmod.item.custom.ModPickaxeItem;
+import net.isomo.bluegoldmod.item.custom.*;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
@@ -34,6 +31,9 @@ public class ModItems {
     public static final Item LEATHER_STRIPS = registerItem("leather_strips",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
+    public static final Item DOWSING_ROD = registerItem("dowsing_rod",
+            new DowsingRodItem(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(16)));
+
     public static final Item UNIVERSAL_CORE = registerItem("universal_core",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
@@ -48,6 +48,9 @@ public class ModItems {
 
     public static final Item REINFORCED_BLUE_GOLD_SWORD = registerItem("reinforced_blue_gold_sword",
             new SwordItem(ModToolMaterial.REACTIVE_NETHERITE,14,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item REINFORCED_BLUE_GOLD_PICKAXE = registerItem("reinforced_blue_gold_pickaxe",
+            new ModPickaxeItem(ModToolMaterial.REACTIVE_NETHERITE,0,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_SHOVEL = registerItem("blue_gold_shovel",
             new ShovelItem(ModToolMaterial.BLUE_GOLD,1.5f,-3.0f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));

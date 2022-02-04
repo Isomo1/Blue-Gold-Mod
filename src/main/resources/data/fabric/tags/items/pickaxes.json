@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "bluegoldmod:blue_gold_pickaxe"
+    "bluegoldmod:blue_gold_pickaxe",
+    "bluegoldmod:reinforced_blue_gold_pickaxe"
   ]
 }
