@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "bluegoldmod:block/reactive_netherite_block"
-  }
-}

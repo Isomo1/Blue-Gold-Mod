@@ -25,9 +25,6 @@ public class ModItems {
     public static final Item IRON_HANDLE = registerItem("iron_handle",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item REINFORCED_SWORD_HANDLE = registerItem("reinforced_sword_handle",
-            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
-
     public static final Item LEATHER_STRIPS = registerItem("leather_strips",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
@@ -43,29 +40,29 @@ public class ModItems {
     public static final Item BLUE_GLASS = registerItem("blue_glass",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item REACTIVE_NETHERITE_INGOT = registerItem("reactive_netherite_ingot",
+    public static final Item REINFORCED_BLUE_GOLD_INGOT = registerItem("reinforced_blue_gold_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_SWORD = registerItem("blue_gold_sword",
             new SwordItem(ModToolMaterial.BLUE_GOLD,3,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item ARKHALITZ = registerItem("arkhalitz",
-            new Arkhalitz(ModToolMaterial.REACTIVE_NETHERITE,60,0.0f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new Arkhalitz(ModToolMaterial.ARKHALITZ,55,-3.5f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_SWORD = registerItem("reinforced_blue_gold_sword",
-            new SwordItem(ModToolMaterial.REACTIVE_NETHERITE,14,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new SwordItem(ModToolMaterial.REINFORCED_BLUE_GOLD,14,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_PICKAXE = registerItem("reinforced_blue_gold_pickaxe",
-            new ModPickaxeItem(ModToolMaterial.REACTIVE_NETHERITE_2,2,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ModPickaxeItem(ModToolMaterial.REINFORCED_BLUE_GOLD_2,2,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_AXE = registerItem("reinforced_blue_gold_axe",
-            new ModAxeItem(ModToolMaterial.REACTIVE_NETHERITE,5,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ModAxeItem(ModToolMaterial.REINFORCED_BLUE_GOLD,5,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_SHOVEL = registerItem("reinforced_blue_gold_shovel",
-            new ShovelItem(ModToolMaterial.REACTIVE_NETHERITE,2,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ShovelItem(ModToolMaterial.REINFORCED_BLUE_GOLD,2,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_HOE = registerItem("reinforced_blue_gold_hoe",
-            new ModHoeItem(ModToolMaterial.REACTIVE_NETHERITE,2,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ModHoeItem(ModToolMaterial.REINFORCED_BLUE_GOLD,2,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_SHOVEL = registerItem("blue_gold_shovel",
             new ShovelItem(ModToolMaterial.BLUE_GOLD,1.5f,-3.0f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
@@ -83,16 +80,16 @@ public class ModItems {
             new ModArmorItem(ModArmorMaterial.BLUE_GLASS, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_HELMET = registerItem("reinforced_blue_gold_helmet",
-            new ArmorItem(ModArmorMaterial.REACTIVE_NETHERITE, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ArmorItem(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_CHESTPLATE = registerItem("reinforced_blue_gold_chestplate",
-            new ArmorItem(ModArmorMaterial.REACTIVE_NETHERITE, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ArmorItem(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_LEGGINGS = registerItem("reinforced_blue_gold_leggings",
-            new ArmorItem(ModArmorMaterial.REACTIVE_NETHERITE, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ArmorItem(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_BOOTS = registerItem("reinforced_blue_gold_boots",
-            new ArmorItem(ModArmorMaterial.REACTIVE_NETHERITE, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ArmorItem(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_HELMET = registerItem("blue_gold_helmet",
             new ArmorItem(ModArmorMaterial.BLUE_GOLD, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));

@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "bluegoldmod:reactive_netherite_ingot"
+      "item": "bluegoldmod:reinforced_blue_gold_ingot"
     }
   },
   "result": {
-    "item": "bluegoldmod:reactive_netherite_block"
+    "item": "bluegoldmod:reinforced_blue_gold_block"
   }
 }

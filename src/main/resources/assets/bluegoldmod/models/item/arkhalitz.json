@@ -2,13 +2,13 @@
   "parent": "item/handheld",
   "display": {
     "thirdperson_righthand": {
-      "rotation": [ 0, -90, 55 ],
-      "translation": [ 0, 24.5, -4 ],
+      "rotation": [ 0, -90, 45 ],
+      "translation": [ 0, 24.5, 1 ],
       "scale": [ 3, 3, 2 ]
     },
     "thirdperson_lefthand": {
-      "rotation": [ 0, 90, -55 ],
-      "translation": [ 0, 24.5, -4 ],
+      "rotation": [ 0, 90, -45 ],
+      "translation": [ 0, 24.5, 1 ],
       "scale": [ 3, 3, 2 ]
     },
     "firstperson_righthand": {

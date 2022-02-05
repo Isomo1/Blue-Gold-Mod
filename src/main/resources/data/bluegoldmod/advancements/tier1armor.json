@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "bluegoldmod:blue_gold_helmet"
+    },
+    "title": "Blue Resilience",
+    "description": "Acquire a piece of Blue Gold Armor",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "bluegoldmod:blue_gold_mod",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bluegoldmod:blue_gold_helmet",
+              "bluegoldmod:blue_gold_chestplate",
+              "bluegoldmod:blue_gold_leggings",
+              "bluegoldmod:blue_gold_boots"
+
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

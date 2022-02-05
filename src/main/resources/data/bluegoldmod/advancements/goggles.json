@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "bluegoldmod:blue_glass_goggles"
+    },
+    "title": "Clear Vision",
+    "description": "Acquire Blue Glass Goggles",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "bluegoldmod:blue_gold_mod",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bluegoldmod:blue_glass_goggles"
+
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

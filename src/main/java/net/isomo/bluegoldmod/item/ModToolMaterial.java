@@ -11,14 +11,14 @@ public enum ModToolMaterial implements ToolMaterial {
     BLUE_GOLD(2, 905, 7.0F, 2.5F, 12, () -> {
         return Ingredient.ofItems(ModItems.BLUE_GOLD_INGOT);
     }),
-    REACTIVE_NETHERITE(4, 2561, 18.5F, 5.0F, 18, () -> {
-        return Ingredient.ofItems(ModItems.REACTIVE_NETHERITE_INGOT);
+    REINFORCED_BLUE_GOLD(4, 2561, 18.5F, 5.0F, 18, () -> {
+        return Ingredient.ofItems(ModItems.REINFORCED_BLUE_GOLD_INGOT);
     }),
-    REACTIVE_NETHERITE_2(4, 2561, 21F, 5.0F, 18, () -> {
-        return Ingredient.ofItems(ModItems.REACTIVE_NETHERITE_INGOT);
+    REINFORCED_BLUE_GOLD_2(4, 2561, 21F, 5.0F, 18, () -> {
+        return Ingredient.ofItems(ModItems.REINFORCED_BLUE_GOLD_INGOT);
     }),
-    BLUE_GLASS(0, 250, 0.0F, 0.0F, 0, () -> {
-        return Ingredient.ofItems(ModItems.BLUE_GLASS);
+    ARKHALITZ(0, 3561, 0.0F, 5.0F, 20, () -> {
+        return Ingredient.ofItems(ModItems.REINFORCED_BLUE_GOLD_INGOT);
     });
 
     private final int miningLevel;

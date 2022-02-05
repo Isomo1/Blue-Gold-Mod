@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "bluegoldmod:reinforced_blue_gold_pickaxe"
+    },
+    "title": "§9Blue Strength",
+    "description": "Acquire a Reinforced Blue Gold Tool",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "bluegoldmod:blue_gold_mod",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bluegoldmod:reinforced_blue_gold_sword",
+              "bluegoldmod:reinforced_blue_gold_shovel",
+              "bluegoldmod:reinforced_blue_gold_axe",
+              "bluegoldmod:reinforced_blue_gold_pickaxe",
+              "bluegoldmod:reinforced_blue_gold_hoe"
+
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

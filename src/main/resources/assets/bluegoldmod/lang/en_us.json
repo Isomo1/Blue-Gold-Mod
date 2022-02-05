@@ -20,7 +20,7 @@
   "item.bluegoldmod.blue_glass": "Blue Glass",
   "item.bluegoldmod.dowsing_rod": "Dowsing Rod",
   "item.bluegoldmod.dowsing_rod.no_valuables": "No Valuables found",
-  "item.bluegoldmod.reactive_netherite_ingot": "Reactive Netherite Ingot",
+  "item.bluegoldmod.reinforced_blue_gold_ingot": "§bReinforced Blue Gold Ingot",
   "item.bluegoldmod.blue_glass_goggles": "Blue Glass Goggles",
   "item.bluegoldmod.blue_gold_helmet": "Blue Gold Helmet",
   "item.bluegoldmod.blue_gold_chestplate": "Blue Gold Chestplate",
@@ -32,9 +32,11 @@
   "item.bluegoldmod.blue_gold_hoe": "Blue Gold Hoe",
   "block.bluegoldmod.blue_gold_block": "Blue Gold Block",
   "block.bluegoldmod.blue_gold_ore": "Blue Gold Ore",
-  "block.bluegoldmod.reactive_netherite_block": "Reactive Netherite Block",
+  "block.bluegoldmod.reinforced_blue_gold_block": "§bReinforced Blue Gold Block",
   "block.bluegoldmod.deepslate_blue_gold_ore": "Deepslate Blue Gold Ore",
   "block.bluegoldmod.raw_blue_gold_block": "Raw Blue Gold Block",
   "block.bluegoldmod.nether_blue_gold_ore": "Nether Blue Gold Ore",
-  "itemGroup.bluegoldmod.blue_gold": "Blue Gold"
+  "itemGroup.bluegoldmod.blue_gold": "Blue Gold",
+  "item.bluegoldmod.arkhalitz.tooltip.shift": "§8Oh poor Arkhalitz... What have they done to you?",
+  "item.bluegoldmod.arkhalitz.tooltip": "§4The Corrupted Blade"
 }

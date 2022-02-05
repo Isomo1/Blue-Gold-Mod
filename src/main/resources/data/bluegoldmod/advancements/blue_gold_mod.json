@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "bluegoldmod:blue_gold_ingot"
+    },
+    "title": "Blue Gold",
+    "description": "Discover Blue Gold",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "bluegoldmod:textures/block/reinforced_blue_gold_block.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bluegoldmod:blue_gold_ingot",
+              "bluegoldmod:blue_gold_nugget",
+              "bluegoldmod:blue_gold_ore",
+              "bluegoldmod:blue_gold_block",
+              "bluegoldmod:reinforced_blue_gold_block",
+              "bluegoldmod:nether_blue_gold_ore",
+              "bluegoldmod:deepslate_blue_gold_ore",
+              "bluegoldmod:raw_blue_gold_block",
+              "bluegoldmod:raw_blue_gold"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

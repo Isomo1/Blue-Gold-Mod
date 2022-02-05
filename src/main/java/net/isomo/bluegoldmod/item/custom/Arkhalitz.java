@@ -11,6 +11,8 @@ import com.google.common.collect.ImmutableMultimap.Builder;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -24,10 +26,15 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.Vanishable;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.tag.BlockTags;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class Arkhalitz extends ToolItem implements Vanishable {
     private final float attackDamage;
@@ -50,6 +57,15 @@ public class Arkhalitz extends ToolItem implements Vanishable {
         player.setVelocity(player.getVelocity().x,2,player.getVelocity().z);
         player.playSound(SoundEvents.BLOCK_BEACON_ACTIVATE,1.0f,1.0f);
         return TypedActionResult.success(player.getStackInHand(hand));
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        if(Screen.hasShiftDown()){
+            tooltip.add(new TranslatableText("item.bluegoldmod.arkhalitz.tooltip.shift"));
+        }else{
+            tooltip.add(new TranslatableText("item.bluegoldmod.arkhalitz.tooltip"));
+        }
     }
 
     public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {

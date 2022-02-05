@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "bluegoldmod:reactive_netherite_block"
+          "name": "bluegoldmod:reinforced_blue_gold_block"
         }
       ],
       "conditions": [

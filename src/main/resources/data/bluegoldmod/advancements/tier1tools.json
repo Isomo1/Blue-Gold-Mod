@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "bluegoldmod:blue_gold_pickaxe"
+    },
+    "title": "Blue Will",
+    "description": "Acquire a Blue Gold Tool",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "bluegoldmod:blue_gold_mod",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bluegoldmod:blue_gold_sword",
+              "bluegoldmod:blue_gold_shovel",
+              "bluegoldmod:blue_gold_axe",
+              "bluegoldmod:blue_gold_pickaxe",
+              "bluegoldmod:blue_gold_hoe"
+
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
