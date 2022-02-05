@@ -34,6 +34,9 @@ public class ModItems {
     public static final Item DOWSING_ROD = registerItem("dowsing_rod",
             new DowsingRodItem(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(16)));
 
+    public static final Item TEST = registerItem("test",
+            new test(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(16)));
+
     public static final Item UNIVERSAL_CORE = registerItem("universal_core",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
@@ -45,6 +48,9 @@ public class ModItems {
 
     public static final Item BLUE_GOLD_SWORD = registerItem("blue_gold_sword",
             new SwordItem(ModToolMaterial.BLUE_GOLD,3,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item ARKHALITZ = registerItem("arkhalitz",
+            new Arkhalitz(ModToolMaterial.REACTIVE_NETHERITE,60,0.0f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_SWORD = registerItem("reinforced_blue_gold_sword",
             new SwordItem(ModToolMaterial.REACTIVE_NETHERITE,14,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
