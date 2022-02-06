@@ -13,15 +13,15 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
+
 import java.util.Map;
 
-public class ModArmorItem extends ArmorItem{
-
+public class tier2 extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(ModArmorMaterial.BLUE_GLASS, StatusEffects.NIGHT_VISION).build();
+                    .put(ModArmorMaterial.REINFORCED_BLUE_GOLD, StatusEffects.HEALTH_BOOST).build();
 
-    public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+    public tier2(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
     }
 
@@ -30,10 +30,10 @@ public class ModArmorItem extends ArmorItem{
         if(!world.isClient()) {
             if(entity instanceof PlayerEntity player) {
 
-                if(hasHelmetOn(player)) {
+                if(hasFullSuitOfArmorOn(player)) {
                     evaluateArmorEffects(player);
-                } else{
-                    player.removeStatusEffect(StatusEffects.NIGHT_VISION);
+                }else{
+                    player.removeStatusEffect(StatusEffects.HEALTH_BOOST);
                 }
             }
         }
@@ -48,8 +48,6 @@ public class ModArmorItem extends ArmorItem{
 
             if(hasCorrectArmorOn(mapArmorMaterial, player)) {
                 addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
-            }else{
-                removeStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
             }
         }
     }
@@ -58,30 +56,28 @@ public class ModArmorItem extends ArmorItem{
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200,0,false,false));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200,1,false,false));
         }
     }
 
-    private boolean hasEffectOn(PlayerEntity player) {
 
-        return player.hasStatusEffect(StatusEffects.NIGHT_VISION);
-    }
-
-    private void removeStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffect mapStatusEffect) {
-        boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
-
-        if(!hasCorrectArmorOn(mapArmorMaterial, player) && hasPlayerEffect) {
-            player.removeStatusEffect(mapStatusEffect);}
-    }
-
-    private boolean hasHelmetOn(PlayerEntity player) {
+    private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
+        ItemStack boots = player.getInventory().getArmorStack(0);
+        ItemStack leggings = player.getInventory().getArmorStack(1);
+        ItemStack breastplate = player.getInventory().getArmorStack(2);
         ItemStack helmet = player.getInventory().getArmorStack(3);
-        return !helmet.isEmpty();
+
+        return !helmet.isEmpty() && !breastplate.isEmpty()
+                && !leggings.isEmpty() && !boots.isEmpty();
     }
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
+        ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
+        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmorStack(1).getItem());
+        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());
         ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
-        return helmet.getMaterial() == material;
+
+        return helmet.getMaterial() == material && breastplate.getMaterial() == material &&
+                leggings.getMaterial() == material && boots.getMaterial() == material;
     }
 }
-

@@ -11,7 +11,7 @@ public enum ModToolMaterial implements ToolMaterial {
     BLUE_GOLD(2, 905, 7.0F, 2.5F, 12, () -> {
         return Ingredient.ofItems(ModItems.BLUE_GOLD_INGOT);
     }),
-    REINFORCED_BLUE_GOLD(4, 2561, 18.5F, 5.0F, 18, () -> {
+    REINFORCED_BLUE_GOLD(4, 2561, 17.5F, 5.0F, 18, () -> {
         return Ingredient.ofItems(ModItems.REINFORCED_BLUE_GOLD_INGOT);
     }),
     REINFORCED_BLUE_GOLD_2(4, 2561, 21F, 5.0F, 18, () -> {

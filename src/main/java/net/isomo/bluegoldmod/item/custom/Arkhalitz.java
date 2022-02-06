@@ -28,6 +28,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -53,10 +54,13 @@ public class Arkhalitz extends ToolItem implements Vanishable {
         return this.attackDamage;
     }
 
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
-        player.setVelocity(player.getVelocity().x,2,player.getVelocity().z);
-        player.playSound(SoundEvents.BLOCK_BEACON_ACTIVATE,1.0f,1.0f);
-        return TypedActionResult.success(player.getStackInHand(hand));
+    public ActionResult useOnBlock(World world, PlayerEntity player, Hand hand){
+        if (!world.isClient) {
+            player.setVelocity(player.getVelocity().x, 2, player.getVelocity().z);
+            player.playSound(SoundEvents.BLOCK_BEACON_ACTIVATE, 1.0f, 1.0f);
+            player.getItemCooldownManager().set(this, 50);
+        }
+        return ActionResult.success(world.isClient);
     }
 
     @Override
@@ -66,6 +70,11 @@ public class Arkhalitz extends ToolItem implements Vanishable {
         }else{
             tooltip.add(new TranslatableText("item.bluegoldmod.arkhalitz.tooltip"));
         }
+    }
+
+    @Override
+    public boolean hasGlint(ItemStack stack) {
+        return true;
     }
 
     public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
