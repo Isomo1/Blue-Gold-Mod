@@ -10,6 +10,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.ElytraItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
@@ -48,6 +49,8 @@ public class tier2 extends ArmorItem {
 
             if(hasCorrectArmorOn(mapArmorMaterial, player)) {
                 addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
+            }else{
+                removeStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
             }
         }
     }
@@ -60,6 +63,12 @@ public class tier2 extends ArmorItem {
         }
     }
 
+    private void removeStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffect mapStatusEffect) {
+        boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
+
+        if(!hasCorrectArmorOn(mapArmorMaterial, player) && hasPlayerEffect) {
+            player.removeStatusEffect(mapStatusEffect);}
+    }
 
     private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
         ItemStack boots = player.getInventory().getArmorStack(0);
@@ -74,10 +83,10 @@ public class tier2 extends ArmorItem {
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
         ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
         ArmorItem leggings = ((ArmorItem)player.getInventory().getArmorStack(1).getItem());
-        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());
+        // ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());        [crashes with elytra]
         ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
 
-        return helmet.getMaterial() == material && breastplate.getMaterial() == material &&
+        return helmet.getMaterial() == material &&
                 leggings.getMaterial() == material && boots.getMaterial() == material;
     }
 }

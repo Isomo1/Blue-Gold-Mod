@@ -20,10 +20,7 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.attribute.EntityAttributeModifier.Operation;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ToolItem;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.item.Vanishable;
+import net.minecraft.item.*;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.text.Text;
@@ -54,13 +51,12 @@ public class Arkhalitz extends ToolItem implements Vanishable {
         return this.attackDamage;
     }
 
-    public ActionResult useOnBlock(World world, PlayerEntity player, Hand hand){
-        if (!world.isClient) {
-            player.setVelocity(player.getVelocity().x, 2, player.getVelocity().z);
-            player.playSound(SoundEvents.BLOCK_BEACON_ACTIVATE, 1.0f, 1.0f);
-            player.getItemCooldownManager().set(this, 50);
-        }
-        return ActionResult.success(world.isClient);
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
+        player.setVelocity(player.getVelocity().x, 2, player.getVelocity().z);
+        player.playSound(SoundEvents.BLOCK_BEACON_ACTIVATE, 1.0f, 1.0f);
+        player.getItemCooldownManager().set(this, 50);
+
+        return TypedActionResult.success(player.getStackInHand(hand));
     }
 
     @Override
