@@ -2,6 +2,8 @@ package net.isomo.bluegoldmod.item.custom;
 
 import com.google.common.collect.ImmutableMap;
 import net.isomo.bluegoldmod.item.ModArmorMaterial;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffect;
@@ -10,19 +12,22 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.ElytraItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
 
+import java.util.List;
 import java.util.Map;
 
-public class tier2 extends ArmorItem {
+public class GogglesItem extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(ModArmorMaterial.REINFORCED_BLUE_GOLD, StatusEffects.HEALTH_BOOST).build();
+                    .put(ModArmorMaterial.BLUE_GLASS, StatusEffects.NIGHT_VISION).build();
 
-    public tier2(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+    public GogglesItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
     }
 
@@ -30,16 +35,24 @@ public class tier2 extends ArmorItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if(!world.isClient()) {
             if(entity instanceof PlayerEntity player) {
-
                 if(hasFullSuitOfArmorOn(player)) {
                     evaluateArmorEffects(player);
                 }else{
-                    player.removeStatusEffect(StatusEffects.HEALTH_BOOST);
+                    player.removeStatusEffect(StatusEffects.NIGHT_VISION);
                 }
             }
         }
 
         super.inventoryTick(stack, world, entity, slot, selected);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        if(Screen.hasShiftDown()){
+            tooltip.add(new TranslatableText("item.bluegoldmod.goggles.tooltip.shift"));
+        }else{
+            tooltip.add(new TranslatableText("item.bluegoldmod.goggles.tooltip"));
+        }
     }
 
     private void evaluateArmorEffects(PlayerEntity player) {
@@ -59,7 +72,7 @@ public class tier2 extends ArmorItem {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200,1,false,false));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200,0,false,false));
         }
     }
 
@@ -71,22 +84,15 @@ public class tier2 extends ArmorItem {
     }
 
     private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
-        ItemStack boots = player.getInventory().getArmorStack(0);
-        ItemStack leggings = player.getInventory().getArmorStack(1);
-        ItemStack breastplate = player.getInventory().getArmorStack(2);
+
         ItemStack helmet = player.getInventory().getArmorStack(3);
 
-        return !helmet.isEmpty() && !breastplate.isEmpty()
-                && !leggings.isEmpty() && !boots.isEmpty();
+        return !helmet.isEmpty();
     }
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-        ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
-        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmorStack(1).getItem());
-        // ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());        [crashes with elytra]
         ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
 
-        return helmet.getMaterial() == material &&
-                leggings.getMaterial() == material && boots.getMaterial() == material;
+        return helmet.getMaterial() == material;
     }
 }

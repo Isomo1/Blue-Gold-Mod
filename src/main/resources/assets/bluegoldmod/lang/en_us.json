@@ -10,6 +10,7 @@
   "item.bluegoldmod.reinforced_blue_gold_shovel": "§bReinforced Blue Gold Shovel",
   "item.bluegoldmod.reinforced_blue_gold_hoe": "§bReinforced Blue Gold Hoe",
   "item.bluegoldmod.reinforced_blue_gold_helmet": "§bReinforced Blue Gold Helmet",
+  "item.bluegoldmod.reinforced_blue_glass_goggles": "§bReinforced Blue Gold Helmet",
   "item.bluegoldmod.reinforced_blue_gold_chestplate": "§bReinforced Blue Gold Chestplate",
   "item.bluegoldmod.reinforced_blue_gold_leggings": "§bReinforced Blue Gold Leggings",
   "item.bluegoldmod.reinforced_blue_gold_boots": "§bReinforced Blue Gold Boots",
@@ -38,5 +39,8 @@
   "block.bluegoldmod.nether_blue_gold_ore": "Nether Blue Gold Ore",
   "itemGroup.bluegoldmod.blue_gold": "Blue Gold",
   "item.bluegoldmod.arkhalitz.tooltip.shift": "§8Oh poor Arkhalitz... What have they done to you?",
-  "item.bluegoldmod.arkhalitz.tooltip": "§4The Corrupted Blade"
+  "item.bluegoldmod.arkhalitz.tooltip": "§4The Corrupted Blade",
+  "item.bluegoldmod.goggles.tooltip.shift": "§8See that which is unseen",
+  "item.bluegoldmod.goggles.tooltip": "Grants permanent night vision"
+
 }
