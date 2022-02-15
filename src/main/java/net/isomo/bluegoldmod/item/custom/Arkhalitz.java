@@ -19,6 +19,7 @@ import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.attribute.EntityAttributeModifier.Operation;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -56,7 +57,6 @@ public class Arkhalitz extends ToolItem implements Vanishable {
         player.setVelocity(player.getVelocity().x, 2, player.getVelocity().z);
         player.playSound(SoundEvents.BLOCK_BEACON_ACTIVATE, 1.0f, 1.0f);
         player.getItemCooldownManager().set(this, 50);
-
         return TypedActionResult.success(player.getStackInHand(hand));
     }
 
