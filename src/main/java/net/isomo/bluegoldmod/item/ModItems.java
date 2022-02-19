@@ -28,9 +28,6 @@ public class ModItems {
     public static final Item LEATHER_STRIPS = registerItem("leather_strips",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item DOWSING_ROD = registerItem("dowsing_rod",
-            new DowsingRodItem(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(16)));
-
     public static final Item TEST = registerItem("test",
             new test(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(16)));
 
@@ -40,29 +37,32 @@ public class ModItems {
     public static final Item BLUE_GLASS = registerItem("blue_glass",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
+    public static final Item MYSTERIOUS_DUST = registerItem("mysterious_dust",
+            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
     public static final Item REINFORCED_BLUE_GOLD_INGOT = registerItem("reinforced_blue_gold_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item BLUE_GOLD_SWORD = registerItem("blue_gold_sword",
-            new SwordItem(ModToolMaterial.BLUE_GOLD,3,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
-
     public static final Item ARKHALITZ = registerItem("arkhalitz",
-            new Arkhalitz(ModToolMaterial.ARKHALITZ,55,-3.5f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new Arkhalitz(ModToolMaterial.ARKHALITZ,48,-3.5f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_SWORD = registerItem("reinforced_blue_gold_sword",
-            new SwordItem(ModToolMaterial.REINFORCED_BLUE_GOLD,14,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new SwordItem(ModToolMaterial.REINFORCED_BLUE_GOLD,6,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_PICKAXE = registerItem("reinforced_blue_gold_pickaxe",
-            new ModPickaxeItem(ModToolMaterial.REINFORCED_BLUE_GOLD_2,2,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ModPickaxeItem(ModToolMaterial.REINFORCED_BLUE_GOLD_PICK,1,-2.8f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_AXE = registerItem("reinforced_blue_gold_axe",
-            new ModAxeItem(ModToolMaterial.REINFORCED_BLUE_GOLD,5,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ModAxeItem(ModToolMaterial.REINFORCED_BLUE_GOLD,5,-3,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_SHOVEL = registerItem("reinforced_blue_gold_shovel",
-            new ShovelItem(ModToolMaterial.REINFORCED_BLUE_GOLD,2,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ShovelItem(ModToolMaterial.REINFORCED_BLUE_GOLD,1.5f,-3.0f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_HOE = registerItem("reinforced_blue_gold_hoe",
-            new ModHoeItem(ModToolMaterial.REINFORCED_BLUE_GOLD,2,-3.2f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ModHoeItem(ModToolMaterial.REINFORCED_BLUE_GOLD,-4,0,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item BLUE_GOLD_SWORD = registerItem("blue_gold_sword",
+            new SwordItem(ModToolMaterial.BLUE_GOLD,3,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_SHOVEL = registerItem("blue_gold_shovel",
             new ShovelItem(ModToolMaterial.BLUE_GOLD,1.5f,-3.0f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));

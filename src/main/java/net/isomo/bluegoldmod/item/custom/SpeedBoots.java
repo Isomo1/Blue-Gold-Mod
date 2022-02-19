@@ -38,7 +38,7 @@ public class SpeedBoots extends ArmorItem {
                 if(hasBootsOn(player)) {
                     evaluateArmorEffects(player);
                 }else{
-                    player.removeStatusEffect(StatusEffects.NIGHT_VISION);
+                    player.removeStatusEffect(StatusEffects.SPEED);
                 }
             }
         }
@@ -72,7 +72,7 @@ public class SpeedBoots extends ArmorItem {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200,1,false,false));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 400,1,false,false));
         }
     }
 

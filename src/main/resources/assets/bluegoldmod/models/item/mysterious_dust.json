@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "bluegoldmod:item/dowsing_rod"
+    "layer0": "bluegoldmod:item/mysterious_dust"
   }
 }
