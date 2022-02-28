@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "bluegoldmod:propulsion_device"
+    },
+    "title": "To the Moon",
+    "description": "Acquire a Propulsion Device",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "bluegoldmod:blue_gold_mod",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bluegoldmod:propulsion_device"
+
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

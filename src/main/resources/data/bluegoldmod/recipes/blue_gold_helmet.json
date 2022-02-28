@@ -1,10 +1,13 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:golden_helmet"
-  },
-  "addition": {
-    "item": "bluegoldmod:blue_gold_ingot"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "bluegoldmod:blue_gold_ingot"
+    }
   },
   "result": {
     "item": "bluegoldmod:blue_gold_helmet"

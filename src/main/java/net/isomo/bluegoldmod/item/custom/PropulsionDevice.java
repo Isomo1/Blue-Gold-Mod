@@ -24,7 +24,7 @@ public class PropulsionDevice extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
         player.setVelocity(player.getVelocity().x, 2, player.getVelocity().z);
         player.playSound(SoundEvents.BLOCK_BEACON_ACTIVATE, 1.0f, 1.0f);
-        player.getItemCooldownManager().set(this, 50);
+        player.getItemCooldownManager().set(this, 80);
         return TypedActionResult.success(player.getStackInHand(hand));
     }
 

@@ -41,7 +41,7 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item ARKHALITZ = registerItem("arkhalitz",
-            new Arkhalitz(ModToolMaterial.ARKHALITZ,48,-3.5f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new Arkhalitz(ModToolMaterial.ARKHALITZ,48,-3.5f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(3561)));
 
     public static final Item REINFORCED_BLUE_GOLD_SWORD = registerItem("reinforced_blue_gold_sword",
             new SwordItem(ModToolMaterial.REINFORCED_BLUE_GOLD,6,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
