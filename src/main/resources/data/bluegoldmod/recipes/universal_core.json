@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "#Y#",
-    "###"
+    "#Z#",
+    "ZYZ",
+    "#Z#"
   ],
   "key": {
     "#": {
@@ -11,6 +11,9 @@
     },
     "Y": {
       "item": "bluegoldmod:reinforced_blue_gold_ingot"
+    },
+    "Z": {
+      "tag": "c:mysterious_dust"
     }
   },
   "result": {

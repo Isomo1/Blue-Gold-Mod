@@ -16,12 +16,6 @@ public class ModItems {
     public static final Item BLUE_GOLD_INGOT = registerItem("blue_gold_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item BLUE_GOLD_NUGGET = registerItem("blue_gold_nugget",
-            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
-
-    public static final Item RAW_BLUE_GOLD = registerItem("raw_blue_gold",
-            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
-
     public static final Item IRON_HANDLE = registerItem("iron_handle",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
@@ -36,6 +30,9 @@ public class ModItems {
 
     public static final Item BLUE_GLASS = registerItem("blue_glass",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item PROPULSION_DEVICE = registerItem("propulsion_device",
+            new PropulsionDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(32)));
 
     public static final Item MYSTERIOUS_DUST = registerItem("mysterious_dust",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));

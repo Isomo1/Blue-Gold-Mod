@@ -21,6 +21,8 @@ public class ModTags {
     public static class Items{
         public static final Tag.Identified<Item> BLUE_GLASS = createCommonTag("blue_glass");
         public static final Tag.Identified<Item> IRON_HANDLE = createCommonTag("iron_handle");
+        public static final Tag.Identified<Item> LEATHER_STRIPS = createCommonTag("leather_strips");
+        public static final Tag.Identified<Item> MYSTERIOUS_DUST = createCommonTag("mysterious_dust");
 
         private static Tag.Identified<Item> createTag(String name){
             return TagFactory.ITEM.create(new Identifier(BlueGoldMod.MOD_ID, name));

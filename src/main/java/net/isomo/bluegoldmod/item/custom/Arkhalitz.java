@@ -54,9 +54,9 @@ public class Arkhalitz extends ToolItem implements Vanishable {
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
-        player.setVelocity(player.getVelocity().x, 2, player.getVelocity().z);
+        player.setVelocity(player.getVelocity().x, 4, player.getVelocity().z);
         player.playSound(SoundEvents.BLOCK_BEACON_ACTIVATE, 1.0f, 1.0f);
-        player.getItemCooldownManager().set(this, 50);
+        player.getItemCooldownManager().set(this, 100);
         return TypedActionResult.success(player.getStackInHand(hand));
     }
 

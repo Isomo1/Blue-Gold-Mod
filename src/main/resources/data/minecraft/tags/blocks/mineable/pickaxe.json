@@ -2,10 +2,6 @@
   "replace": false,
   "values": [
     "bluegoldmod:blue_gold_block",
-    "bluegoldmod:blue_gold_ore",
-    "bluegoldmod:deepslate_blue_gold_ore",
-    "bluegoldmod:nether_blue_gold_ore",
-    "bluegoldmod:raw_blue_gold_block",
     "bluegoldmod:reinforced_blue_gold_block"
   ]
 }

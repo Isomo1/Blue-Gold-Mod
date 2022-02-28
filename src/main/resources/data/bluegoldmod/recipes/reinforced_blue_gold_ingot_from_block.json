@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "bluegoldmod:raw_blue_gold_block"
+      "item": "bluegoldmod:reinforced_blue_gold_block"
     }
   ],
   "result": {
-    "item": "bluegoldmod:raw_blue_gold",
+    "item": "bluegoldmod:reinforced_blue_gold_ingot",
     "count": 9
   }
 }
