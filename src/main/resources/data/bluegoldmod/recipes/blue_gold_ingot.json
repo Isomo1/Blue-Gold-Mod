@@ -1,18 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "#ZZ",
-    "ZZ "
-  ],
-  "key": {
-    "#": {
-      "tag": "c:mysterious_dust"
-    },
-    "Z": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "bluegoldmod:mysterious_dust"
     }
-  },
+  ],
+
   "result": {
     "item": "bluegoldmod:blue_gold_ingot"
   }

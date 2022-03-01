@@ -3,6 +3,8 @@ package net.isomo.bluegoldmod.item.custom;
 
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -24,7 +26,7 @@ public class PropulsionDevice extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
         player.setVelocity(player.getVelocity().x, 2, player.getVelocity().z);
         player.playSound(SoundEvents.BLOCK_BEACON_ACTIVATE, 1.0f, 1.0f);
-        player.getItemCooldownManager().set(this, 80);
+        player.getItemCooldownManager().set(this, 90);
         return TypedActionResult.success(player.getStackInHand(hand));
     }
 
