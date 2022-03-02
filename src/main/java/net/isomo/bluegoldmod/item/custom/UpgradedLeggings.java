@@ -18,16 +18,15 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-
 import java.util.List;
 import java.util.Map;
 
-public class ParkourBoots extends ArmorItem {
+public class UpgradedLeggings extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(ModArmorMaterial.LEATHER_STRIPS, StatusEffects.SPEED).build();
+                    .put(ModArmorMaterial.REINFORCED_BLUE_GOLD, StatusEffects.JUMP_BOOST).build();
 
-    public ParkourBoots(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+    public UpgradedLeggings(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
     }
 
@@ -35,10 +34,10 @@ public class ParkourBoots extends ArmorItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if(!world.isClient()) {
             if(entity instanceof PlayerEntity player) {
-                if(hasBootsOn(player)) {
+                if(hasHelmetOn(player)) {
                     evaluateArmorEffects(player);
                 }else{
-                    player.removeStatusEffect(StatusEffects.SPEED);
+                    player.removeStatusEffect(StatusEffects.JUMP_BOOST);
                 }
             }
         }
@@ -49,9 +48,9 @@ public class ParkourBoots extends ArmorItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
-            tooltip.add(new TranslatableText("item.bluegoldmod.parkourboots.tooltip.shift"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.upgradedleggings.tooltip.shift"));
         }else{
-            tooltip.add(new TranslatableText("item.bluegoldmod.parkourboots.tooltip"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.upgradedleggings.tooltip"));
         }
     }
 
@@ -70,24 +69,17 @@ public class ParkourBoots extends ArmorItem {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 400,1,false,false));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200,0,false,false));
         }
     }
 
-    private void removeStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffect mapStatusEffect) {
-        boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
-
-        if(!hasCorrectArmorOn(mapArmorMaterial, player) && hasPlayerEffect) {
-            player.removeStatusEffect(mapStatusEffect);}
-    }
-
-    private boolean hasBootsOn(PlayerEntity player) {
-        ItemStack boots = player.getInventory().getArmorStack(0);
-        return !boots.isEmpty();
+    private boolean hasHelmetOn(PlayerEntity player) {
+        ItemStack helmet = player.getInventory().getArmorStack(3);
+        return !helmet.isEmpty();
     }
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-        ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
-        return boots.getMaterial() == material;
+        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
+        return helmet.getMaterial() == material;
     }
 }

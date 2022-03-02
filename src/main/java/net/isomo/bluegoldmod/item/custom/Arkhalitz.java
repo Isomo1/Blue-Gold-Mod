@@ -85,7 +85,7 @@ public class Arkhalitz extends ToolItem implements Vanishable {
 
     private void playUseSound(World world, BlockPos blockPos) {
         Random random = world.getRandom();
-        world.playSound((PlayerEntity)null, blockPos, SoundEvents.ENTITY_DRAGON_FIREBALL_EXPLODE, SoundCategory.BLOCKS, 1.0F, (random.nextFloat() - random.nextFloat()) * 0.2F + 1.0F);
+        world.playSound((PlayerEntity)null, blockPos, SoundEvents.BLOCK_CONDUIT_ACTIVATE, SoundCategory.BLOCKS, 1.0F, (random.nextFloat() - random.nextFloat()) * 0.2F + 1.0F);
     }
 
     @Override

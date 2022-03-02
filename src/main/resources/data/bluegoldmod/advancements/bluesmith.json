@@ -4,7 +4,7 @@
       "item": "minecraft:anvil"
     },
     "title": "§9Bluesmith",
-    "description": "Acquire a piece of Upgraded Reinforced Blue Gold Armor",
+    "description": "Upgrade a piece of Reinforced Blue Gold Armor",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true

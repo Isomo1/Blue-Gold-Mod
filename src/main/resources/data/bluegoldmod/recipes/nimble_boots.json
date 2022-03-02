@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "X X",
-    "Z Z",
+    "ZRZ",
     "Y Y"
   ],
   "key": {
@@ -14,9 +14,12 @@
     },
     "Y": {
       "item": "bluegoldmod:blue_gold_ingot"
+    },
+    "R": {
+      "item": "minecraft:gold_nugget"
     }
   },
   "result": {
-    "item": "bluegoldmod:parkour_boots"
+    "item": "bluegoldmod:nimble_boots"
   }
 }

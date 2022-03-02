@@ -1,10 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "bluegoldmod:parkour_boots"
+      "item": "bluegoldmod:nimble_boots"
     },
-    "title": "Parkour!",
-    "description": "Acquire Parkour Boots",
+    "title": "Quick Feet",
+    "description": "Acquire Nimble Boots",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true
@@ -17,7 +17,7 @@
         "items": [
           {
             "items": [
-              "bluegoldmod:parkour_boots"
+              "bluegoldmod:nimble_boots"
 
             ]
           }

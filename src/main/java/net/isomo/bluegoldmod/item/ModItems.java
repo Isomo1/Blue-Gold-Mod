@@ -94,8 +94,8 @@ public class ModItems {
     public static final Item REINFORCED_BLUE_GOLD_BOOTS_UPGRADED = registerItem("reinforced_blue_gold_boots_upgraded",
             new UpgradedBoots(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item PARKOUR_BOOTS = registerItem("parkour_boots",
-            new ParkourBoots(ModArmorMaterial.LEATHER_STRIPS, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+    public static final Item NIMBLE_BOOTS = registerItem("nimble_boots",
+            new NimbleBoots(ModArmorMaterial.LEATHER_STRIPS, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_HELMET = registerItem("blue_gold_helmet",
             new ArmorItem(ModArmorMaterial.BLUE_GOLD, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
