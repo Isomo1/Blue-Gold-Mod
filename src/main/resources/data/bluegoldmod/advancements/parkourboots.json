@@ -1,10 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "bluegoldmod:propulsion_device"
+      "item": "bluegoldmod:parkour_boots"
     },
-    "title": "Blue Boost",
-    "description": "Acquire a Propulsion Device",
+    "title": "Parkour!",
+    "description": "Acquire Parkour Boots",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true
@@ -17,7 +17,7 @@
         "items": [
           {
             "items": [
-              "bluegoldmod:propulsion_device"
+              "bluegoldmod:parkour_boots"
 
             ]
           }

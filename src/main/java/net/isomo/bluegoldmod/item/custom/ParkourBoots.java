@@ -22,12 +22,12 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Map;
 
-public class SpeedBoots extends ArmorItem {
+public class ParkourBoots extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(ModArmorMaterial.REINFORCED_BLUE_GOLD, StatusEffects.SPEED).build();
+                    .put(ModArmorMaterial.LEATHER_STRIPS, StatusEffects.SPEED).build();
 
-    public SpeedBoots(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+    public ParkourBoots(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
     }
 
@@ -49,9 +49,9 @@ public class SpeedBoots extends ArmorItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
-            tooltip.add(new TranslatableText("item.bluegoldmod.speedboots.tooltip.shift"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.parkourboots.tooltip.shift"));
         }else{
-            tooltip.add(new TranslatableText("item.bluegoldmod.speedboots.tooltip"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.parkourboots.tooltip"));
         }
     }
 
@@ -62,8 +62,6 @@ public class SpeedBoots extends ArmorItem {
 
             if(hasCorrectArmorOn(mapArmorMaterial, player)) {
                 addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
-            }else{
-                removeStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
             }
         }
     }

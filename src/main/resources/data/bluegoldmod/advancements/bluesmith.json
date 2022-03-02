@@ -1,10 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "bluegoldmod:propulsion_device"
+      "item": "minecraft:anvil"
     },
-    "title": "Blue Boost",
-    "description": "Acquire a Propulsion Device",
+    "title": "§9Bluesmith",
+    "description": "Acquire a piece of Upgraded Reinforced Blue Gold Armor",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true
@@ -17,7 +17,8 @@
         "items": [
           {
             "items": [
-              "bluegoldmod:propulsion_device"
+              "bluegoldmod:reinforced_blue_gold_helmet_upgraded",
+              "bluegoldmod:reinforced_blue_gold_boots_upgraded"
 
             ]
           }

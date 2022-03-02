@@ -22,12 +22,12 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Map;
 
-public class GogglesItem extends ArmorItem {
+public class UpgradedHelmet extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(ModArmorMaterial.BLUE_GLASS, StatusEffects.NIGHT_VISION).build();
+                    .put(ModArmorMaterial.REINFORCED_BLUE_GOLD, StatusEffects.NIGHT_VISION).build();
 
-    public GogglesItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+    public UpgradedHelmet(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
     }
 
@@ -49,9 +49,9 @@ public class GogglesItem extends ArmorItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
-            tooltip.add(new TranslatableText("item.bluegoldmod.goggles.tooltip.shift"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.upgradedhelmet.tooltip.shift"));
         }else{
-            tooltip.add(new TranslatableText("item.bluegoldmod.goggles.tooltip"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.upgradedhelmet.tooltip"));
         }
     }
 
@@ -70,7 +70,7 @@ public class GogglesItem extends ArmorItem {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 200,0,false,false));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200,0,false,false));
         }
     }
 

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "Z Z",
+    "Y Y"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:leather"
+    },
+    "Z": {
+      "tag": "c:leather_strips"
+    },
+    "Y": {
+      "item": "bluegoldmod:blue_gold_ingot"
+    }
+  },
+  "result": {
+    "item": "bluegoldmod:parkour_boots"
+  }
+}

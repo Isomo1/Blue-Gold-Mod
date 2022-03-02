@@ -18,6 +18,9 @@ public enum ModArmorMaterial implements ArmorMaterial {
     }),
     BLUE_GLASS("blue_glass", 15, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_SPYGLASS_USE, 1.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.BLUE_GLASS);
+    }),
+    LEATHER_STRIPS("leather_strips", 15, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 1.0F, 0.0F, () -> {
+        return Ingredient.ofItems(ModItems.LEATHER_STRIPS);
     });
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
