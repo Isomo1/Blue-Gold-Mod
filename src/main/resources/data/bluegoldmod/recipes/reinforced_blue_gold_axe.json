@@ -3,10 +3,10 @@
   "pattern": [
     " XX",
     " YX",
-    " # "
+    "EZE"
   ],
   "key": {
-    "#": {
+    "E": {
       "tag": "c:iron_handle"
     },
     "X": {
@@ -14,6 +14,9 @@
     },
     "Y": {
       "item": "bluegoldmod:universal_core"
+    },
+    "Z": {
+      "item": "minecraft:netherite_axe"
     }
   },
   "result": {

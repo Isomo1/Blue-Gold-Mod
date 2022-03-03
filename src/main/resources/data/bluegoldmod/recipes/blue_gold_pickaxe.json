@@ -1,10 +1,20 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:iron_pickaxe"
-  },
-  "addition": {
-    "item": "bluegoldmod:blue_gold_ingot"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ZZZ",
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "tag": "c:iron_handle"
+    },
+    "Y": {
+      "item": "minecraft:iron_pickaxe"
+    },
+    "Z": {
+      "item": "bluegoldmod:blue_gold_ingot"
+    }
   },
   "result": {
     "item": "bluegoldmod:blue_gold_pickaxe"

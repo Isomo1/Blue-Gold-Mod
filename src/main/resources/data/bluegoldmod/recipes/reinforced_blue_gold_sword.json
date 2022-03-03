@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " X ",
-    "#X#",
-    " Y "
+    "  X",
+    "#XY",
+    "Z# "
   ],
   "key": {
     "#": {
@@ -11,6 +11,9 @@
     },
     "X": {
       "item": "bluegoldmod:reinforced_blue_gold_ingot"
+    },
+    "Z": {
+      "item": "minecraft:netherite_sword"
     },
     "Y": {
       "item": "bluegoldmod:universal_core"

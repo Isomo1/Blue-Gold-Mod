@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XZX",
-    "YZY"
+    "XWX",
+    "ZYZ"
   ],
   "key": {
     "X": {
@@ -10,6 +10,9 @@
     },
     "Z": {
       "tag": "c:leather_strips"
+    },
+    "W": {
+      "item": "minecraft:leather_boots"
     },
     "Y": {
       "tag": "c:radiant_dust"

@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "RYZ",
-    "X X"
+    "XXX",
+    "XYX",
+    " Z "
   ],
   "key": {
     "X": {
@@ -10,9 +11,6 @@
     },
     "Y": {
       "item": "minecraft:netherite_helmet"
-    },
-    "R": {
-      "item": "minecraft:iron_ingot"
     },
     "Z": {
       "item": "bluegoldmod:universal_core"
