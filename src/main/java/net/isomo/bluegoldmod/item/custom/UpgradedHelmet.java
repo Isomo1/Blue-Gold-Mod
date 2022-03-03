@@ -37,8 +37,6 @@ public class UpgradedHelmet extends ArmorItem {
             if(entity instanceof PlayerEntity player) {
                 if(hasHelmetOn(player)) {
                     evaluateArmorEffects(player);
-                }else{
-                    player.removeStatusEffect(StatusEffects.NIGHT_VISION);
                 }
             }
         }
@@ -70,7 +68,7 @@ public class UpgradedHelmet extends ArmorItem {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200,0,false,false));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1000,0,false,false));
         }
     }
 

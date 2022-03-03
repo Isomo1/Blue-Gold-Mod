@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bluegoldmod:radiant_dust"
+    },
+    {
+      "item": "minecraft:glass"
+    }
+  ],
+
+  "result": {
+    "item": "bluegoldmod:blue_glass"
+  }
+}

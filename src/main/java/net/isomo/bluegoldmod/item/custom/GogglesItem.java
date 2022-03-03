@@ -37,8 +37,6 @@ public class GogglesItem extends ArmorItem {
             if(entity instanceof PlayerEntity player) {
                 if(hasHelmetOn(player)) {
                     evaluateArmorEffects(player);
-                }else{
-                    player.removeStatusEffect(StatusEffects.NIGHT_VISION);
                 }
             }
         }

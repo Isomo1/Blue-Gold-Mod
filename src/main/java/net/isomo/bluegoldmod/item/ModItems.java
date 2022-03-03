@@ -28,7 +28,7 @@ public class ModItems {
     public static final Item UNIVERSAL_CORE = registerItem("universal_core",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item BLUE_GLASS = registerItem("blue_glass",
+    public static final Item INFERIOR_CORE = registerItem("inferior_core",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item PROPULSION_DEVICE = registerItem("propulsion_device",

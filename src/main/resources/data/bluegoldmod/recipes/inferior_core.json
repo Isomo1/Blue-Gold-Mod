@@ -1,22 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
+    "#Z#",
     "ZYZ",
-    "Y#Y",
-    "ZYZ"
+    "#Z#"
   ],
   "key": {
     "#": {
-      "item": "bluegoldmod:inferior_core"
-    },
-    "Z": {
-      "item": "minecraft:iron_ingot"
+      "item": "bluegoldmod:blue_glass"
     },
     "Y": {
       "item": "bluegoldmod:blue_gold_ingot"
+    },
+    "Z": {
+      "tag": "c:radiant_dust"
     }
   },
   "result": {
-    "item": "bluegoldmod:camouflage_device"
+    "item": "bluegoldmod:inferior_core"
   }
 }

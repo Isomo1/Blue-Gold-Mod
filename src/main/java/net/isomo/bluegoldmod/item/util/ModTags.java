@@ -15,11 +15,9 @@ public class ModTags {
         private static Tag.Identified<Block> createCommonTag(String name){
             return TagFactory.BLOCK.create(new Identifier("c", name));
         }
-
     }
 
     public static class Items{
-        public static final Tag.Identified<Item> BLUE_GLASS = createCommonTag("blue_glass");
         public static final Tag.Identified<Item> IRON_HANDLE = createCommonTag("iron_handle");
         public static final Tag.Identified<Item> LEATHER_STRIPS = createCommonTag("leather_strips");
         public static final Tag.Identified<Item> RADIANT_DUST = createCommonTag("radiant_dust");

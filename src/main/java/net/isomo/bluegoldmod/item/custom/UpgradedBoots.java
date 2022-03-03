@@ -36,8 +36,6 @@ public class UpgradedBoots extends ArmorItem {
             if(entity instanceof PlayerEntity player) {
                 if(hasBootsOn(player)) {
                     evaluateArmorEffects(player);
-                }else{
-                    player.removeStatusEffect(StatusEffects.SPEED);
                 }
             }
         }
@@ -69,7 +67,7 @@ public class UpgradedBoots extends ArmorItem {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200,3,false,false));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 300,3,false,false));
         }
     }
 
