@@ -22,6 +22,9 @@ public class ModItems {
     public static final Item LEATHER_STRIPS = registerItem("leather_strips",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
+    public static final Item BLUE_GLASS = registerItem("blue_glass",
+            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
     public static final Item TEST = registerItem("test",
             new test(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(16)));
 

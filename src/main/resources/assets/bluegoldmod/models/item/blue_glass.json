@@ -1,3 +1,6 @@
 {
-  "parent": "bluegoldmod:block/blue_glass"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "bluegoldmod:item/blue_glass"
+  }
 }

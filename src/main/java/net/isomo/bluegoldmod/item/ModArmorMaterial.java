@@ -18,7 +18,7 @@ public enum ModArmorMaterial implements ArmorMaterial {
         return Ingredient.ofItems(ModItems.REINFORCED_BLUE_GOLD_INGOT);
     }),
     BLUE_GLASS("blue_glass", 15, new int[]{0, 0, 0, 1}, 5, SoundEvents.ITEM_SPYGLASS_USE, 1.0F, 0.0F, () -> {
-        return Ingredient.ofItems(ModBlocks.BLUE_GLASS);
+        return Ingredient.ofItems(ModItems.BLUE_GLASS);
     }),
     LEATHER_STRIPS("leather_strips", 15, new int[]{1, 0, 0, 0}, 5, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 1.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.LEATHER_STRIPS);

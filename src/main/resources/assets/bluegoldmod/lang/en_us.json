@@ -23,7 +23,7 @@
   "item.bluegoldmod.reinforced_sword_handle": "§bReinforced Sword Handle",
   "item.bluegoldmod.leather_strips": "Leather Strips",
   "item.bluegoldmod.universal_core": "§bUniversal Core",
-  "block.bluegoldmod.blue_glass": "Blue Glass",
+  "item.bluegoldmod.blue_glass": "Blue Glass",
   "item.bluegoldmod.propulsion_device": "§bPropulsion Device",
   "item.bluegoldmod.propulsion_device.tooltip.shift": "§8Works great with the Elytra!",
   "item.bluegoldmod.propulsion_device.tooltip": "Launches the user vertically",
