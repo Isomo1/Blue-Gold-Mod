@@ -37,6 +37,9 @@ public class ModItems {
     public static final Item RADIANT_DUST = registerItem("radiant_dust",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
+    public static final Item CAMOUFLAGE_DEVICE = registerItem("camouflage_device",
+            new CamouflageDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
     public static final Item REINFORCED_BLUE_GOLD_INGOT = registerItem("reinforced_blue_gold_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 

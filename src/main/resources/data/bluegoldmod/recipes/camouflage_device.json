@@ -1,19 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "#ZZ",
-    "ZZ "
+    "ZYZ",
+    "Y#Y",
+    "ZYZ"
   ],
   "key": {
     "#": {
-      "item": "minecraft:netherite_scrap"
+      "item": "bluegoldmod:universal_core"
     },
     "Z": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Y": {
       "item": "bluegoldmod:blue_gold_ingot"
     }
   },
   "result": {
-    "item": "bluegoldmod:reinforced_blue_gold_ingot"
+    "item": "bluegoldmod:camouflage_device"
   }
 }

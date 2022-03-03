@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "  #",
-    " # ",
-    "#  "
+    " X ",
+    "#X#",
+    " Y "
   ],
   "key": {
     "#": {
       "tag": "c:iron_handle"
     },
-    "Z": {
-      "item": "bluegoldmod:iron_handle"
+    "X": {
+      "item": "bluegoldmod:reinforced_blue_gold_ingot"
     },
     "Y": {
-      "item": "c:iron_handle"
+      "item": "bluegoldmod:universal_core"
     }
   },
   "result": {

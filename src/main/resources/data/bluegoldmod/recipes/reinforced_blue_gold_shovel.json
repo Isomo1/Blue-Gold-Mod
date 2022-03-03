@@ -1,22 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XYX",
-    "XZX",
-    "X X"
+    " X ",
+    " Y ",
+    " # "
   ],
   "key": {
+    "#": {
+      "tag": "c:iron_handle"
+    },
     "X": {
       "item": "bluegoldmod:reinforced_blue_gold_ingot"
     },
     "Y": {
-      "item": "minecraft:netherite_leggings"
-    },
-    "Z": {
       "item": "bluegoldmod:universal_core"
     }
   },
   "result": {
-    "item": "bluegoldmod:reinforced_blue_gold_leggings"
+    "item": "bluegoldmod:reinforced_blue_gold_shovel"
   }
 }
