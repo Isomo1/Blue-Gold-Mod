@@ -18,16 +18,15 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-
 import java.util.List;
 import java.util.Map;
 
-public class UpgradedHelmet extends ArmorItem {
+public class UpgradedChestplate extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(ModArmorMaterial.REINFORCED_BLUE_GOLD, StatusEffects.NIGHT_VISION).build();
+                    .put(ModArmorMaterial.REINFORCED_BLUE_GOLD, StatusEffects.STRENGTH).build();
 
-    public UpgradedHelmet(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+    public UpgradedChestplate(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
     }
 
@@ -35,10 +34,10 @@ public class UpgradedHelmet extends ArmorItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if(!world.isClient()) {
             if(entity instanceof PlayerEntity player) {
-                if(hasHelmetOn(player)) {
+                if(hasChestOn(player)) {
                     evaluateArmorEffects(player);
                 }else{
-                    player.removeStatusEffect(StatusEffects.NIGHT_VISION);
+                    player.removeStatusEffect(StatusEffects.STRENGTH);
                 }
             }
         }
@@ -49,9 +48,9 @@ public class UpgradedHelmet extends ArmorItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
-            tooltip.add(new TranslatableText("item.bluegoldmod.upgraded_helmet.tooltip.shift"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.upgraded_chestplate.tooltip.shift"));
         }else{
-            tooltip.add(new TranslatableText("item.bluegoldmod.upgraded_helmet.tooltip"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.upgraded_chestplate.tooltip"));
         }
     }
 
@@ -70,17 +69,17 @@ public class UpgradedHelmet extends ArmorItem {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200,0,false,false));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200,1,false,false));
         }
     }
 
-    private boolean hasHelmetOn(PlayerEntity player) {
-        ItemStack helmet = player.getInventory().getArmorStack(3);
+    private boolean hasChestOn(PlayerEntity player) {
+        ItemStack helmet = player.getInventory().getArmorStack(2);
         return !helmet.isEmpty();
     }
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
+        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());
         return helmet.getMaterial() == material;
     }
 }

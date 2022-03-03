@@ -48,9 +48,9 @@ public class UpgradedBoots extends ArmorItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
-            tooltip.add(new TranslatableText("item.bluegoldmod.upgradedboots.tooltip.shift"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.upgraded_boots.tooltip.shift"));
         }else{
-            tooltip.add(new TranslatableText("item.bluegoldmod.upgradedboots.tooltip"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.upgraded_boots.tooltip"));
         }
     }
 

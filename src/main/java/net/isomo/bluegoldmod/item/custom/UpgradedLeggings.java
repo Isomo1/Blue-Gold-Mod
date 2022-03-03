@@ -34,7 +34,7 @@ public class UpgradedLeggings extends ArmorItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if(!world.isClient()) {
             if(entity instanceof PlayerEntity player) {
-                if(hasHelmetOn(player)) {
+                if(hasLeggingsOn(player)) {
                     evaluateArmorEffects(player);
                 }else{
                     player.removeStatusEffect(StatusEffects.JUMP_BOOST);
@@ -48,9 +48,9 @@ public class UpgradedLeggings extends ArmorItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
-            tooltip.add(new TranslatableText("item.bluegoldmod.upgradedleggings.tooltip.shift"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.upgraded_leggings.tooltip.shift"));
         }else{
-            tooltip.add(new TranslatableText("item.bluegoldmod.upgradedleggings.tooltip"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.upgraded_leggings.tooltip"));
         }
     }
 
@@ -69,17 +69,17 @@ public class UpgradedLeggings extends ArmorItem {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1200,0,false,false));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 400,2,false,false));
         }
     }
 
-    private boolean hasHelmetOn(PlayerEntity player) {
-        ItemStack helmet = player.getInventory().getArmorStack(3);
-        return !helmet.isEmpty();
+    private boolean hasLeggingsOn(PlayerEntity player) {
+        ItemStack leggings = player.getInventory().getArmorStack(1);
+        return !leggings.isEmpty();
     }
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
-        return helmet.getMaterial() == material;
+        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmorStack(1).getItem());
+        return leggings.getMaterial() == material;
     }
 }

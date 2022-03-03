@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bluegoldmod:reinforced_blue_gold_chestplate"
+    },
+    {
+      "item": "bluegoldmod:fierce_chestplate"
+    }
+  ],
+
+  "result": {
+    "item": "bluegoldmod:reinforced_blue_gold_chestplate_upgraded"
+  }
+}

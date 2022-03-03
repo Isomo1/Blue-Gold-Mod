@@ -85,8 +85,14 @@ public class ModItems {
     public static final Item REINFORCED_BLUE_GOLD_CHESTPLATE = registerItem("reinforced_blue_gold_chestplate",
             new ArmorItem(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
+    public static final Item REINFORCED_BLUE_GOLD_CHESTPLATE_UPGRADED = registerItem("reinforced_blue_gold_chestplate_upgraded",
+            new UpgradedChestplate(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
     public static final Item REINFORCED_BLUE_GOLD_LEGGINGS = registerItem("reinforced_blue_gold_leggings",
             new ArmorItem(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item REINFORCED_BLUE_GOLD_LEGGINGS_UPGRADED = registerItem("reinforced_blue_gold_leggings_upgraded",
+            new UpgradedLeggings(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_BOOTS = registerItem("reinforced_blue_gold_boots",
             new ArmorItem(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
