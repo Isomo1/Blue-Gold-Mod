@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
+    "Y Y",
     "XRX",
-    "Y Y"
+    "XXX"
   ],
   "key": {
     "X": {
@@ -16,6 +17,6 @@
     }
   },
   "result": {
-    "item": "bluegoldmod:nimble_boots"
+    "item": "bluegoldmod:fierce_chestplate"
   }
 }

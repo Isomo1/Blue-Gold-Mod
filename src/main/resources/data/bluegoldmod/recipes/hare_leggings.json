@@ -1,12 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XRX",
-    "Y Y"
+    "YRY",
+    "Z Z",
+    "X X"
   ],
   "key": {
     "X": {
       "item": "minecraft:leather"
+    },
+    "Z": {
+      "tag": "c:leather_strips"
     },
     "Y": {
       "tag": "c:radiant_dust"
@@ -16,6 +20,6 @@
     }
   },
   "result": {
-    "item": "bluegoldmod:nimble_boots"
+    "item": "bluegoldmod:hare_leggings"
   }
 }

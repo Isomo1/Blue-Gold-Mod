@@ -34,7 +34,7 @@ public class ModItems {
     public static final Item PROPULSION_DEVICE = registerItem("propulsion_device",
             new PropulsionDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(32)));
 
-    public static final Item MYSTERIOUS_DUST = registerItem("mysterious_dust",
+    public static final Item RADIANT_DUST = registerItem("radiant_dust",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_INGOT = registerItem("reinforced_blue_gold_ingot",
@@ -96,6 +96,12 @@ public class ModItems {
 
     public static final Item NIMBLE_BOOTS = registerItem("nimble_boots",
             new NimbleBoots(ModArmorMaterial.LEATHER_STRIPS, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item HARE_LEGGINGS = registerItem("hare_leggings",
+            new HareLeggings(ModArmorMaterial.LEATHER_STRIPS, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item FIERCE_CHESTPLATE = registerItem("fierce_chestplate",
+            new FierceChestplate(ModArmorMaterial.LEATHER_STRIPS, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_HELMET = registerItem("blue_gold_helmet",
             new ArmorItem(ModArmorMaterial.BLUE_GOLD, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
