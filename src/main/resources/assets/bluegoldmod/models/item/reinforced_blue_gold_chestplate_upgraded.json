@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "bluegoldmod:item/reinforced_blue_gold_chestplate"
-  }
-}

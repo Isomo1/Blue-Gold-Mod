@@ -85,14 +85,8 @@ public class ModItems {
     public static final Item REINFORCED_BLUE_GOLD_CHESTPLATE = registerItem("reinforced_blue_gold_chestplate",
             new ArmorItem(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item REINFORCED_BLUE_GOLD_CHESTPLATE_UPGRADED = registerItem("reinforced_blue_gold_chestplate_upgraded",
-            new UpgradedChestplate(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
-
     public static final Item REINFORCED_BLUE_GOLD_LEGGINGS = registerItem("reinforced_blue_gold_leggings",
             new ArmorItem(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
-
-    public static final Item REINFORCED_BLUE_GOLD_LEGGINGS_UPGRADED = registerItem("reinforced_blue_gold_leggings_upgraded",
-            new UpgradedLeggings(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_BOOTS = registerItem("reinforced_blue_gold_boots",
             new ArmorItem(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
@@ -102,12 +96,6 @@ public class ModItems {
 
     public static final Item NIMBLE_BOOTS = registerItem("nimble_boots",
             new NimbleBoots(ModArmorMaterial.LEATHER_STRIPS, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
-
-    public static final Item HARE_LEGGINGS = registerItem("hare_leggings",
-            new HareLeggings(ModArmorMaterial.LEATHER_STRIPS, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
-
-    public static final Item FIERCE_CHESTPLATE = registerItem("fierce_chestplate",
-            new FierceChestplate(ModArmorMaterial.LEATHER_STRIPS, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_HELMET = registerItem("blue_gold_helmet",
             new ArmorItem(ModArmorMaterial.BLUE_GOLD, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));

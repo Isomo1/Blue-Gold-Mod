@@ -16,10 +16,10 @@ public enum ModArmorMaterial implements ArmorMaterial {
     REINFORCED_BLUE_GOLD("reinforced_blue_gold", 45, new int[]{3, 7, 9, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.0F, 1.0F, () -> {
         return Ingredient.ofItems(ModItems.REINFORCED_BLUE_GOLD_INGOT);
     }),
-    BLUE_GLASS("blue_glass", 15, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_SPYGLASS_USE, 1.0F, 0.0F, () -> {
+    BLUE_GLASS("blue_glass", 15, new int[]{0, 0, 0, 1}, 5, SoundEvents.ITEM_SPYGLASS_USE, 1.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.BLUE_GLASS);
     }),
-    LEATHER_STRIPS("leather_strips", 15, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 1.0F, 0.0F, () -> {
+    LEATHER_STRIPS("leather_strips", 15, new int[]{1, 0, 0, 0}, 5, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 1.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.LEATHER_STRIPS);
     });
 

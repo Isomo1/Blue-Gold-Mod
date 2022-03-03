@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  #",
+    " # ",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "tag": "c:iron_handle"
+    },
+    "Z": {
+      "item": "bluegoldmod:iron_handle"
+    },
+    "Y": {
+      "item": "c:iron_handle"
+    }
+  },
+  "result": {
+    "item": "bluegoldmod:reinforced_blue_gold_sword"
+  }
+}

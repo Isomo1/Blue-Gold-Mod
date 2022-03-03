@@ -49,9 +49,9 @@ public class NimbleBoots extends ArmorItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
-            tooltip.add(new TranslatableText("item.bluegoldmod.nimbleboots.tooltip.shift"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.nimble_boots.tooltip.shift"));
         }else{
-            tooltip.add(new TranslatableText("item.bluegoldmod.nimbleboots.tooltip"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.nimble_boots.tooltip"));
         }
     }
 

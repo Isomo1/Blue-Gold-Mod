@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XRX",
-    "Y Y"
+    "XZX",
+    "YZY"
   ],
   "key": {
     "X": {
       "item": "minecraft:leather"
     },
+    "Z": {
+      "tag": "c:leather_strips"
+    },
     "Y": {
       "tag": "c:radiant_dust"
-    },
-    "R": {
-      "item": "minecraft:gold_nugget"
     }
   },
   "result": {

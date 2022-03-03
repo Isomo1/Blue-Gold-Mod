@@ -4,7 +4,7 @@
       "item": "bluegoldmod:nimble_boots"
     },
     "title": "Quick Feet",
-    "description": "Acquire Nimble Boots",
+    "description": "Acquire Nimble Leather Boots",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true
