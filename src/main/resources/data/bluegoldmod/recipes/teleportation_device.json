@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YZY",
+    "E#E",
+    "YWY"
+  ],
+  "key": {
+    "#": {
+      "item": "bluegoldmod:universal_core"
+    },
+    "Z": {
+      "item": "minecraft:ender_eye"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "W": {
+      "item": "bluegoldmod:perfect_boots"
+    },
+    "Y": {
+      "item": "bluegoldmod:reinforced_blue_gold_ingot"
+    }
+  },
+  "result": {
+    "item": "bluegoldmod:teleportation_device"
+  }
+}

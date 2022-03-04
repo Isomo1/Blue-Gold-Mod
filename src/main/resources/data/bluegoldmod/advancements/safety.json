@@ -3,7 +3,7 @@
     "icon": {
       "item": "bluegoldmod:safety_device"
     },
-    "title": "Better Safe Than Sorry",
+    "title": "§9Blue Shield",
     "description": "Acquire a Safety Device",
     "frame": "task",
     "show_toast": true,

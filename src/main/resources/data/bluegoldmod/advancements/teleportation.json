@@ -1,10 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "bluegoldmod:camouflage_device"
+      "item": "bluegoldmod:teleportation_device"
     },
-    "title": "Blue Shadow",
-    "description": "Acquire a Camouflage Device",
+    "title": "§9Blue Presence",
+    "description": "Acquire a Teleportation Device",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true
@@ -17,7 +17,7 @@
         "items": [
           {
             "items": [
-              "bluegoldmod:camouflage_device"
+              "bluegoldmod:teleportation_device"
 
             ]
           }

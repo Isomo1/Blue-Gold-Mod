@@ -28,7 +28,7 @@
   "item.bluegoldmod.universal_core": "§bUniversal Core",
   "item.bluegoldmod.azure_glass": "Azure Glass",
   "item.bluegoldmod.reinforced_blue_gold_ingot": "§bReinforced Blue Gold Ingot",
-  "item.bluegoldmod.blue_glass_goggles": "§bBlue Glass Goggles",
+  "item.bluegoldmod.azure_glass_goggles": "§bAzure Glass Goggles",
   "item.bluegoldmod.blue_gold_helmet": "Blue Gold Helmet",
   "item.bluegoldmod.blue_gold_chestplate": "Blue Gold Chestplate",
   "item.bluegoldmod.blue_gold_leggings": "Blue Gold Leggings",
@@ -42,7 +42,7 @@
   "block.bluegoldmod.reinforced_blue_gold_block": "§bReinforced Blue Gold Block",
   "itemGroup.bluegoldmod.blue_gold": "Blue Gold",
   "item.bluegoldmod.goggles.tooltip.shift": "§8See that which is unseen.",
-  "item.bluegoldmod.goggles.tooltip": "§lPerk:§r Flickering §aNight Vision§r.",
+  "item.bluegoldmod.goggles.tooltip": "§lPerk:§r Unstable §aNight Vision§r.",
   "item.bluegoldmod.upgraded_helmet.tooltip.shift": "§8See that which is unseen.",
   "item.bluegoldmod.upgraded_helmet.tooltip": "§lPerk:§r Stable §aNight Vision§r.",
   "item.bluegoldmod.nimble_boots.tooltip.shift": "§8Running around at the speed of sound.",
@@ -57,5 +57,8 @@
   "item.bluegoldmod.safety_device.tooltip": "§lPerk:§r Ignores §oall§r incoming damage for 1 second§r.",
   "item.bluegoldmod.propulsion_device": "§bPropulsion Device",
   "item.bluegoldmod.propulsion_device.tooltip.shift": "§8Works great with the Perfect Boots or the Elytra.",
-  "item.bluegoldmod.propulsion_device.tooltip": "§lPerk:§r Launches the user §overtically§r."
+  "item.bluegoldmod.propulsion_device.tooltip": "§lPerk:§r Launches the user §overtically§r.",
+  "item.bluegoldmod.teleportation_device": "§bTeleportation Device",
+  "item.bluegoldmod.teleportation_device.tooltip.shift": "§8If endermen can do it, why can't you?",
+  "item.bluegoldmod.teleportation_device.tooltip": "§lPerk:§r Rapidly §oteleports§r the user, ignoring §oall collision damage."
 }

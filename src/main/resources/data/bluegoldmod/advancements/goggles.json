@@ -1,10 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "bluegoldmod:blue_glass_goggles"
+      "item": "bluegoldmod:azure_glass_goggles"
     },
-    "title": "Clear Vision",
-    "description": "Acquire Blue Glass Goggles",
+    "title": "Azure Eyes",
+    "description": "Acquire Azure Glass Goggles",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true
@@ -17,7 +17,7 @@
         "items": [
           {
             "items": [
-              "bluegoldmod:blue_glass_goggles"
+              "bluegoldmod:azure_glass_goggles"
 
             ]
           }

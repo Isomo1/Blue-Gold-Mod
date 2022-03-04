@@ -43,6 +43,9 @@ public class ModItems {
     public static final Item CAMOUFLAGE_DEVICE = registerItem("camouflage_device",
             new CamouflageDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(32)));
 
+    public static final Item TELEPORTATION_DEVICE = registerItem("teleportation_device",
+            new TeleportationDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(32)));
+
     public static final Item SAFETY_DEVICE = registerItem("safety_device",
             new SafetyDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(32)));
 
@@ -82,7 +85,7 @@ public class ModItems {
     public static final Item BLUE_GOLD_HOE = registerItem("blue_gold_hoe",
             new ModHoeItem(ModToolMaterial.BLUE_GOLD,-2,-0.5f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item BLUE_GLASS_GOGGLES = registerItem("blue_glass_goggles",
+    public static final Item AZURE_GLASS_GOGGLES = registerItem("azure_glass_goggles",
             new GogglesItem(ModArmorMaterial.AZURE_GLASS, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_HELMET = registerItem("reinforced_blue_gold_helmet",

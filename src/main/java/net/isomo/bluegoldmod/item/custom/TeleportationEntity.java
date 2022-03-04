@@ -1,0 +1,72 @@
+package net.isomo.bluegoldmod.item.custom;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.hit.EntityHitResult;
+import net.minecraft.util.hit.HitResult;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
+
+public class TeleportationEntity extends ThrownItemEntity {
+
+    public TeleportationEntity(World world, LivingEntity owner) {
+        super(EntityType.ENDER_PEARL, owner, world);
+    }
+
+    protected Item getDefaultItem() {
+        return Items.ENDER_PEARL;
+    }
+
+    protected void onEntityHit(EntityHitResult entityHitResult) {
+        super.onEntityHit(entityHitResult);
+        entityHitResult.getEntity().damage(DamageSource.thrownProjectile(this, this.getOwner()), 0.0F);
+    }
+
+    protected void onCollision(HitResult hitResult) {
+        super.onCollision(hitResult);
+
+        if (!this.world.isClient && !this.isRemoved()) {
+            Entity entity = this.getOwner();
+            if (entity instanceof ServerPlayerEntity serverPlayerEntity) {
+                if (serverPlayerEntity.networkHandler.getConnection().isOpen() && serverPlayerEntity.world == this.world && !serverPlayerEntity.isSleeping()) {
+                    if (entity.hasVehicle()) {
+                        serverPlayerEntity.requestTeleportAndDismount(this.getX(), this.getY(), this.getZ());
+                    } else {
+                        entity.requestTeleport(this.getX(), this.getY(), this.getZ());
+                    }
+                    entity.onLanding();
+                }
+            } else if (entity != null) {
+                entity.requestTeleport(this.getX(), this.getY(), this.getZ());
+                entity.onLanding();
+            }
+            this.discard();
+        }
+    }
+
+    public void tick() {
+        Entity entity = this.getOwner();
+        if (entity instanceof PlayerEntity && !entity.isAlive()) {
+            this.discard();
+        } else {
+            super.tick();
+        }
+    }
+
+    @Nullable
+    public Entity moveToWorld(ServerWorld destination) {
+        Entity entity = this.getOwner();
+        if (entity != null && entity.world.getRegistryKey() != destination.getRegistryKey()) {
+            this.setOwner(null);
+        }
+        return super.moveToWorld(destination);
+    }
+}

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "bluegoldmod:item/blue_glass_goggles"
+    "layer0": "bluegoldmod:item/azure_glass_goggles"
   }
 }
