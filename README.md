@@ -1,4 +1,2 @@
-��# bluegoldmod
-
-Made by: Isomo (Coding), DarkChar (Sprites)
+Made by: Isomo (Coding+Sprites), DarkChar (Sprites)
 
