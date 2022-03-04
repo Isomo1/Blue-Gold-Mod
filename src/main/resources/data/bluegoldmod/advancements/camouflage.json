@@ -3,7 +3,7 @@
     "icon": {
       "item": "bluegoldmod:camouflage_device"
     },
-    "title": "From the Shadows",
+    "title": "Hidden Blade",
     "description": "Acquire a Camouflage Device",
     "frame": "task",
     "show_toast": true,
