@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "bluegoldmod:perfect_boots"
+    },
+    "title": "Perfectionist",
+    "description": "Acquire Perfect Boots",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "bluegoldmod:blue_gold_mod",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bluegoldmod:perfect_boots"
+
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

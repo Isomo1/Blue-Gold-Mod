@@ -121,6 +121,9 @@ public class ModItems {
     public static final Item BLUE_GOLD_BOOTS = registerItem("blue_gold_boots",
             new ArmorItem(ModArmorMaterial.BLUE_GOLD, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
+    public static final Item PERFECT_BOOTS = registerItem("perfect_boots",
+            new PerfectBoots(ModArmorMaterial.UNIVERSAL_CORE, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registry.ITEM, new Identifier(BlueGoldMod.MOD_ID, name), item);
