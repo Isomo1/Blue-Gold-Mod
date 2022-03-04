@@ -25,6 +25,9 @@ public class ModItems {
     public static final Item BLUE_GLASS = registerItem("blue_glass",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
+    public static final Item BLUE_GOLD_NUGGET = registerItem("blue_gold_nugget",
+            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
     public static final Item TEST = registerItem("test",
             new test(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(16)));
 
@@ -42,6 +45,9 @@ public class ModItems {
 
     public static final Item CAMOUFLAGE_DEVICE = registerItem("camouflage_device",
             new CamouflageDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(32)));
+
+    public static final Item SAFETY_DEVICE = registerItem("safety_device",
+            new SafetyDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(32)));
 
     public static final Item REINFORCED_BLUE_GOLD_INGOT = registerItem("reinforced_blue_gold_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));

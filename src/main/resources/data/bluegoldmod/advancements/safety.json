@@ -1,10 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "bluegoldmod:camouflage_device"
+      "item": "bluegoldmod:safety_device"
     },
-    "title": "From the Shadows",
-    "description": "Acquire a Camouflage Device",
+    "title": "Better Safe Than Sorry",
+    "description": "Acquire a Safety Device",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true
@@ -17,7 +17,7 @@
         "items": [
           {
             "items": [
-              "bluegoldmod:camouflage_device"
+              "bluegoldmod:safety_device"
 
             ]
           }

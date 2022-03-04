@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "YZY",
+    " Z ",
     "Z#Z",
-    "YZY"
+    "YYY"
   ],
   "key": {
     "#": {
       "item": "bluegoldmod:inferior_core"
     },
     "Z": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:amethyst_shard"
     },
     "Y": {
       "item": "bluegoldmod:blue_gold_ingot"

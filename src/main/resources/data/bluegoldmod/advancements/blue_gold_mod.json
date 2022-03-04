@@ -19,6 +19,7 @@
             "items": [
               "bluegoldmod:blue_gold_ingot",
               "bluegoldmod:blue_gold_block",
+              "bluegoldmod:blue_gold_nugget",
               "bluegoldmod:reinforced_blue_gold_block",
               "bluegoldmod:reinforced_blue_gold_ingot"
             ]

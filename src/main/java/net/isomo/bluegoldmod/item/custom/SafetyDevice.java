@@ -18,17 +18,15 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class CamouflageDevice extends Item {
-    public CamouflageDevice(Settings settings) {
+public class SafetyDevice extends Item {
+    public SafetyDevice(Settings settings) {
         super(settings);
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 1200,0,false,false));
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 1200,0,false,false));
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 1200,1,false,false));
-        player.playSound(SoundEvents.AMBIENT_SOUL_SAND_VALLEY_MOOD, 1.0f, 1.0f);
-        player.getItemCooldownManager().set(this, 2400);
+        player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20,99999,false,false));
+        player.playSound(SoundEvents.BLOCK_AMETHYST_BLOCK_BREAK, 1.0f, 1.0f);
+        player.getItemCooldownManager().set(this, 500);
         return TypedActionResult.success(player.getStackInHand(hand));
     }
 
@@ -36,9 +34,9 @@ public class CamouflageDevice extends Item {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
-            tooltip.add(new TranslatableText("item.bluegoldmod.camouflage_device.tooltip.shift"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.safety_device.tooltip.shift"));
         }else{
-            tooltip.add(new TranslatableText("item.bluegoldmod.camouflage_device.tooltip"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.safety_device.tooltip"));
         }
     }
 

@@ -3,20 +3,20 @@
   "pattern": [
     "YYY",
     "Z#Z",
-    "YYY"
+    " Y "
   ],
   "key": {
     "#": {
-      "item": "bluegoldmod:inferior_core"
+      "item": "bluegoldmod:universal_core"
     },
     "Z": {
       "item": "minecraft:amethyst_shard"
     },
     "Y": {
-      "item": "bluegoldmod:blue_gold_ingot"
+      "item": "bluegoldmod:reinforced_blue_gold_ingot"
     }
   },
   "result": {
-    "item": "bluegoldmod:camouflage_device"
+    "item": "bluegoldmod:safety_device"
   }
 }

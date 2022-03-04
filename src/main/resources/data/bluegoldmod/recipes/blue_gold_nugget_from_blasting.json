@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "bluegoldmod:blue_gold_sword"
+    },
+    {
+      "item": "bluegoldmod:blue_gold_shovel"
+    },
+    {
+      "item": "bluegoldmod:blue_gold_hoe"
+    },
+    {
+      "item": "bluegoldmod:blue_gold_axe"
+    },
+    {
+      "item": "bluegoldmod:blue_gold_pickaxe"
+    },
+    {
+      "item": "bluegoldmod:blue_gold_helmet"
+    },
+    {
+      "item": "bluegoldmod:blue_gold_chestplate"
+    },
+    {
+      "item": "bluegoldmod:blue_gold_leggings"
+    },
+    {
+      "item": "bluegoldmod:blue_gold_boots"
+    }
+  ],
+
+  "result": "bluegoldmod:blue_gold_nugget",
+  "experience": 0.7,
+  "cookingtime": 100
+}
