@@ -15,7 +15,7 @@
       "item": "minecraft:leather_boots"
     },
     "Y": {
-      "tag": "c:radiant_dust"
+      "item": "bluegoldmod:inferior_core"
     }
   },
   "result": {

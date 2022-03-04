@@ -22,6 +22,9 @@ public class ModItems {
     public static final Item AZURE_GLASS = registerItem("azure_glass",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
+    public static final Item INDIGO_DIAMOND = registerItem("indigo_diamond",
+            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
     public static final Item BLUE_GOLD_NUGGET = registerItem("blue_gold_nugget",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
