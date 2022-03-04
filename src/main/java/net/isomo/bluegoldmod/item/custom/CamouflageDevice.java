@@ -33,7 +33,6 @@ public class CamouflageDevice extends Item {
         return TypedActionResult.success(player.getStackInHand(hand));
     }
 
-
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
@@ -42,6 +41,4 @@ public class CamouflageDevice extends Item {
             tooltip.add(new TranslatableText("item.bluegoldmod.camouflage_device.tooltip"));
         }
     }
-
-
 }

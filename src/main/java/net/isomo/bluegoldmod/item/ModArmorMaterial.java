@@ -17,13 +17,13 @@ public enum ModArmorMaterial implements ArmorMaterial {
     REINFORCED_BLUE_GOLD("reinforced_blue_gold", 45, new int[]{3, 7, 9, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.0F, 1.0F, () -> {
         return Ingredient.ofItems(ModItems.REINFORCED_BLUE_GOLD_INGOT);
     }),
-    BLUE_GLASS("blue_glass", 15, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_SPYGLASS_USE, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(ModItems.BLUE_GLASS);
+    AZURE_GLASS("azure_glass", 15, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_SPYGLASS_USE, 0.0F, 0.0F, () -> {
+        return Ingredient.ofItems(ModItems.AZURE_GLASS);
     }),
     LEATHER_STRIPS("leather_strips", 10, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.LEATHER_STRIPS);
     }),
-    UNIVERSAL_CORE("universal_core", 45, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
+    UNIVERSAL_CORE("universal_core", 45, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 0.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.UNIVERSAL_CORE);
     });
 

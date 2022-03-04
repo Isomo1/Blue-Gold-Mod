@@ -25,7 +25,7 @@ import java.util.Map;
 public class GogglesItem extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(ModArmorMaterial.BLUE_GLASS, StatusEffects.NIGHT_VISION).build();
+                    .put(ModArmorMaterial.AZURE_GLASS, StatusEffects.NIGHT_VISION).build();
 
     public GogglesItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);

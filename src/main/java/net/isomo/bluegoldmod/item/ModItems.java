@@ -4,10 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.isomo.bluegoldmod.BlueGoldMod;
 import net.isomo.bluegoldmod.item.custom.*;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -22,7 +19,7 @@ public class ModItems {
     public static final Item LEATHER_STRIPS = registerItem("leather_strips",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item BLUE_GLASS = registerItem("blue_glass",
+    public static final Item AZURE_GLASS = registerItem("azure_glass",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_NUGGET = registerItem("blue_gold_nugget",
@@ -86,7 +83,7 @@ public class ModItems {
             new ModHoeItem(ModToolMaterial.BLUE_GOLD,-2,-0.5f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GLASS_GOGGLES = registerItem("blue_glass_goggles",
-            new GogglesItem(ModArmorMaterial.BLUE_GLASS, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new GogglesItem(ModArmorMaterial.AZURE_GLASS, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_HELMET = registerItem("reinforced_blue_gold_helmet",
             new ArmorItem(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
@@ -123,7 +120,6 @@ public class ModItems {
 
     public static final Item PERFECT_BOOTS = registerItem("perfect_boots",
             new PerfectBoots(ModArmorMaterial.UNIVERSAL_CORE, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
-
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registry.ITEM, new Identifier(BlueGoldMod.MOD_ID, name), item);
