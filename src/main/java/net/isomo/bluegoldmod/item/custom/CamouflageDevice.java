@@ -19,15 +19,14 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class CamouflageDevice extends Item {
-    public CamouflageDevice(Settings settings) {
-        super(settings);
-    }
+    public CamouflageDevice(Settings settings) {super(settings);}
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
         player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 500,0,false,false));
         player.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 200,1,false,false));
         player.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 200,0,false,false));
         player.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 500,0,false,false));
+        player.getStackInHand(hand).damage(1,player,p->p.sendToolBreakStatus(hand));
         player.playSound(SoundEvents.AMBIENT_SOUL_SAND_VALLEY_MOOD, 1.0f, 1.0f);
         player.getItemCooldownManager().set(this, 1000);
         return TypedActionResult.success(player.getStackInHand(hand));

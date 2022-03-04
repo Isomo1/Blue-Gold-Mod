@@ -30,9 +30,7 @@ public class TeleportationEntity extends ThrownItemEntity {
         entityHitResult.getEntity().damage(DamageSource.thrownProjectile(this, this.getOwner()), 0.0F);
     }
 
-    protected void onCollision(HitResult hitResult) {
-        super.onCollision(hitResult);
-
+    protected void onCollision(HitResult hitResult) {super.onCollision(hitResult);
         if (!this.world.isClient && !this.isRemoved()) {
             Entity entity = this.getOwner();
             if (entity instanceof ServerPlayerEntity serverPlayerEntity) {

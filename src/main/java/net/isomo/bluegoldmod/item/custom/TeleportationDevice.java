@@ -4,12 +4,10 @@ package net.isomo.bluegoldmod.item.custom;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.thrown.EnderPearlEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Hand;
@@ -24,14 +22,15 @@ public class TeleportationDevice extends Item {
         super(settings);
     }
 
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        ItemStack itemStack = user.getStackInHand(hand);
-        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDER_EYE_DEATH, SoundCategory.NEUTRAL, 0.6F, 1.0F);
-        user.getItemCooldownManager().set(this, 100);
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
+        ItemStack itemStack = player.getStackInHand(hand);
+        player.getStackInHand(hand).damage(1,player,p->p.sendToolBreakStatus(hand));
+        world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENTITY_ENDER_EYE_DEATH, SoundCategory.NEUTRAL, 0.6F, 1.0F);
+        player.getItemCooldownManager().set(this, 100);
         if (!world.isClient) {
-            TeleportationEntity teleport = new TeleportationEntity(world, user);
+            TeleportationEntity teleport = new TeleportationEntity(world, player);
             teleport.setItem(itemStack);
-            teleport.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 5.0F, 0.0F);
+            teleport.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, 5.0F, 0.0F);
             world.spawnEntity(teleport);
         }
         return TypedActionResult.success(itemStack, world.isClient());

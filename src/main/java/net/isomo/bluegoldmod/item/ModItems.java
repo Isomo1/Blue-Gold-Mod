@@ -28,29 +28,26 @@ public class ModItems {
     public static final Item BLUE_GOLD_NUGGET = registerItem("blue_gold_nugget",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item TEST = registerItem("test",
-            new test(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(16)));
-
     public static final Item UNIVERSAL_CORE = registerItem("universal_core",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item INFERIOR_CORE = registerItem("inferior_core",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item PROPULSION_DEVICE = registerItem("propulsion_device",
-            new PropulsionDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(32)));
-
     public static final Item RADIANT_DUST = registerItem("radiant_dust",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item CAMOUFLAGE_DEVICE = registerItem("camouflage_device",
-            new CamouflageDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(32)));
+            new CamouflageDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(1000)));
 
     public static final Item TELEPORTATION_DEVICE = registerItem("teleportation_device",
-            new TeleportationDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(32)));
+            new TeleportationDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(2000)));
 
     public static final Item SAFETY_DEVICE = registerItem("safety_device",
-            new SafetyDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(32)));
+            new SafetyDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(2000)));
+
+    public static final Item PROPULSION_DEVICE = registerItem("propulsion_device",
+            new PropulsionDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(1000)));
 
     public static final Item REINFORCED_BLUE_GOLD_INGOT = registerItem("reinforced_blue_gold_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));

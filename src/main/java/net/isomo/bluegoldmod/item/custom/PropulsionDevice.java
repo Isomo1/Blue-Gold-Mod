@@ -3,8 +3,6 @@ package net.isomo.bluegoldmod.item.custom;
 
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -25,11 +23,11 @@ public class PropulsionDevice extends Item {
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
         player.setVelocity(player.getVelocity().x, 3, player.getVelocity().z);
+        player.getStackInHand(hand).damage(1,player,p->p.sendToolBreakStatus(hand));
         player.playSound(SoundEvents.BLOCK_BEACON_ACTIVATE, 1.0f, 1.0f);
         player.getItemCooldownManager().set(this, 100);
         return TypedActionResult.success(player.getStackInHand(hand));
     }
-
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
@@ -39,6 +37,4 @@ public class PropulsionDevice extends Item {
             tooltip.add(new TranslatableText("item.bluegoldmod.propulsion_device.tooltip"));
         }
     }
-
-
 }
