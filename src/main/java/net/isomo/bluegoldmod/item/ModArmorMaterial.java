@@ -20,9 +20,6 @@ public enum ModArmorMaterial implements ArmorMaterial {
     AZURE_GLASS("azure_glass", 15, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_SPYGLASS_USE, 0.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.AZURE_GLASS);
     }),
-    LEATHER_STRIPS("leather_strips", 10, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(ModItems.LEATHER_STRIPS);
-    }),
     UNIVERSAL_CORE("universal_core", 45, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 0.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.UNIVERSAL_CORE);
     });

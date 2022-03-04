@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bluegoldmod:azure_glass"
+    }
+  ],
+  "result": {
+    "item": "bluegoldmod:azure_glass_pieces"
+  }
+}

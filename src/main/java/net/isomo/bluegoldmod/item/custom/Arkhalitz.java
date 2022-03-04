@@ -17,8 +17,6 @@ import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.attribute.EntityAttributeModifier.Operation;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.sound.SoundCategory;
@@ -28,8 +26,6 @@ import net.minecraft.tag.BlockTags;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
@@ -39,20 +35,15 @@ import java.util.List;
 import java.util.Random;
 
 public class Arkhalitz extends ToolItem implements Vanishable {
-    private final float attackDamage;
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
     public Arkhalitz(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, settings);
-        this.attackDamage = (float)attackDamage + toolMaterial.getAttackDamage();
+        float attackDamage1 = (float) attackDamage + toolMaterial.getAttackDamage();
         Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
-        builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", (double)this.attackDamage, Operation.ADDITION));
+        builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", (double) attackDamage1, Operation.ADDITION));
         builder.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", (double)attackSpeed, Operation.ADDITION));
         this.attributeModifiers = builder.build();
-    }
-
-    public float getAttackDamage() {
-        return this.attackDamage;
     }
 
     public ActionResult useOnBlock(ItemUsageContext context) {

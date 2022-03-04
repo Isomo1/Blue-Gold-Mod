@@ -25,7 +25,7 @@ import java.util.Map;
 public class NimbleBoots extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(ModArmorMaterial.LEATHER_STRIPS, StatusEffects.SPEED).build();
+                    .put(ModArmorMaterial.AZURE_GLASS, StatusEffects.SPEED).build();
 
     public NimbleBoots(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);

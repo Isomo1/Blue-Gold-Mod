@@ -13,6 +13,9 @@ public class ModItems {
     public static final Item BLUE_GOLD_INGOT = registerItem("blue_gold_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
+    public static final Item BLUE_GOLD_NUGGET = registerItem("blue_gold_nugget",
+            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
     public static final Item IRON_HANDLE = registerItem("iron_handle",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
@@ -22,19 +25,19 @@ public class ModItems {
     public static final Item AZURE_GLASS = registerItem("azure_glass",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item INDIGO_DIAMOND = registerItem("indigo_diamond",
+    public static final Item AZURE_GLASS_PIECES = registerItem("azure_glass_pieces",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item BLUE_GOLD_NUGGET = registerItem("blue_gold_nugget",
+    public static final Item RADIANT_DUST = registerItem("radiant_dust",
+            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item INDIGO_DIAMOND = registerItem("indigo_diamond",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item UNIVERSAL_CORE = registerItem("universal_core",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
-    public static final Item INFERIOR_CORE = registerItem("inferior_core",
-            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
-
-    public static final Item RADIANT_DUST = registerItem("radiant_dust",
+    public static final Item ESSENTIAL_CORE = registerItem("essential_core",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item CAMOUFLAGE_DEVICE = registerItem("camouflage_device",
@@ -88,6 +91,9 @@ public class ModItems {
     public static final Item AZURE_GLASS_GOGGLES = registerItem("azure_glass_goggles",
             new GogglesItem(ModArmorMaterial.AZURE_GLASS, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
+    public static final Item NIMBLE_BOOTS = registerItem("nimble_boots",
+            new NimbleBoots(ModArmorMaterial.AZURE_GLASS, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
     public static final Item REINFORCED_BLUE_GOLD_HELMET = registerItem("reinforced_blue_gold_helmet",
             new ArmorItem(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
@@ -105,9 +111,6 @@ public class ModItems {
 
     public static final Item REINFORCED_BLUE_GOLD_BOOTS_UPGRADED = registerItem("reinforced_blue_gold_boots_upgraded",
             new UpgradedBoots(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
-
-    public static final Item NIMBLE_BOOTS = registerItem("nimble_boots",
-            new NimbleBoots(ModArmorMaterial.LEATHER_STRIPS, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_HELMET = registerItem("blue_gold_helmet",
             new ArmorItem(ModArmorMaterial.BLUE_GOLD, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));

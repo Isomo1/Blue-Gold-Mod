@@ -30,7 +30,7 @@ public class TeleportationDevice extends Item {
         if (!world.isClient) {
             TeleportationEntity teleport = new TeleportationEntity(world, player);
             teleport.setItem(itemStack);
-            teleport.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, 5.0F, 0.0F);
+            teleport.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, 4.0F, 0.0F);
             world.spawnEntity(teleport);
         }
         return TypedActionResult.success(itemStack, world.isClient());
