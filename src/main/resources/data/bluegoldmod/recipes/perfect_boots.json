@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RYX",
+    "ZWZ"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:black_dye"
+    },
+    "Y": {
+      "item": "minecraft:iron_boots"
+    },
+    "Z": {
+      "tag": "c:leather_strips"
+    },
+    "R": {
+      "item": "minecraft:white_dye"
+    },
+    "W": {
+      "item": "bluegoldmod:universal_core"
+    }
+  },
+  "result": {
+    "item": "bluegoldmod:perfect_boots"
+  }
+}

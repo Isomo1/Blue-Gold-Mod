@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "bluegoldmod:radiant_dust"
+      "tag": "c:radiant_dust"
     },
     {
       "item": "minecraft:gold_ingot"
