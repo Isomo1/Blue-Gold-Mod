@@ -62,5 +62,5 @@
   "item.bluegoldmod.propulsion_device.tooltip": "§lPerk:§r Launches the user §overtically§r.",
   "item.bluegoldmod.teleportation_device": "§bTeleportation Device",
   "item.bluegoldmod.teleportation_device.tooltip.shift": "§8If endermen can do it, why can't you?",
-  "item.bluegoldmod.teleportation_device.tooltip": "§lPerk:§r Rapidly §oteleports§r, ignoring §oall collision damage."
+  "item.bluegoldmod.teleportation_device.tooltip": "§lPerk:§r Rapidly §oteleports§r the user, ignoring §oall collision damage."
 }
