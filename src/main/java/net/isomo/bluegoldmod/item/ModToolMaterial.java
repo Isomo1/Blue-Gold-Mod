@@ -1,7 +1,5 @@
 package net.isomo.bluegoldmod.item;
 
-import net.minecraft.item.ItemConvertible;
-import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;
@@ -13,13 +11,10 @@ public enum ModToolMaterial implements ToolMaterial {
     BLUE_GOLD(2, 905, 7.0F, 2.5F, 12, () -> {
         return Ingredient.ofItems(ModItems.BLUE_GOLD_INGOT);
     }),
-    REINFORCED_BLUE_GOLD(4, 2561, 12.0F, 5.0F, 18, () -> {
+    REINFORCED_BLUE_GOLD(4, 3561, 99.0F, 5.0F, 0, () -> {
         return Ingredient.ofItems(ModItems.REINFORCED_BLUE_GOLD_INGOT);
     }),
-    REINFORCED_BLUE_GOLD_PICK(4, 2561, 21.0F, 5.0F, 18, () -> {
-        return Ingredient.ofItems(ModItems.REINFORCED_BLUE_GOLD_INGOT);
-    }),
-    ARKHALITZ(0, 3561, 0.0F, 5.0F, 15, () -> {
+    ARKHALITZ(0, 4561, 0.0F, 5.0F, 0, () -> {
         return Ingredient.ofItems(ModItems.REINFORCED_BLUE_GOLD_INGOT);
     });
 

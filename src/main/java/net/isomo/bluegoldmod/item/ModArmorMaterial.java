@@ -14,10 +14,10 @@ public enum ModArmorMaterial implements ArmorMaterial {
     BLUE_GOLD("blue_gold", 24, new int[]{2, 5, 7, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.BLUE_GOLD_INGOT);
     }),
-    REINFORCED_BLUE_GOLD("reinforced_blue_gold", 45, new int[]{3, 7, 9, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.0F, 1.0F, () -> {
+    REINFORCED_BLUE_GOLD("reinforced_blue_gold", 45, new int[]{3, 7, 9, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.0F, 2.0F, () -> {
         return Ingredient.ofItems(ModItems.REINFORCED_BLUE_GOLD_INGOT);
     }),
-    AZURE_GLASS("azure_glass", 15, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_SPYGLASS_USE, 0.0F, 0.0F, () -> {
+    AZURE_GLASS("azure_glass", 15, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.AZURE_GLASS);
     }),
     UNIVERSAL_CORE("universal_core", 45, new int[]{0, 0, 0, 0}, 5, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 0.0F, 0.0F, () -> {

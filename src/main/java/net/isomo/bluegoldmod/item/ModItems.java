@@ -59,16 +59,16 @@ public class ModItems {
             new Arkhalitz(ModToolMaterial.ARKHALITZ,48,-3.5f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(3561)));
 
     public static final Item REINFORCED_BLUE_GOLD_SWORD = registerItem("reinforced_blue_gold_sword",
-            new SwordItem(ModToolMaterial.REINFORCED_BLUE_GOLD,6,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ModSwordItem(ModToolMaterial.REINFORCED_BLUE_GOLD,12,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_PICKAXE = registerItem("reinforced_blue_gold_pickaxe",
-            new ModPickaxeItem(ModToolMaterial.REINFORCED_BLUE_GOLD_PICK,1,-2.8f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ModPickaxeItem(ModToolMaterial.REINFORCED_BLUE_GOLD,1,-2.8f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_AXE = registerItem("reinforced_blue_gold_axe",
             new ModAxeItem(ModToolMaterial.REINFORCED_BLUE_GOLD,5,-3,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_SHOVEL = registerItem("reinforced_blue_gold_shovel",
-            new ShovelItem(ModToolMaterial.REINFORCED_BLUE_GOLD,1.5f,-3.0f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ModShovelItem(ModToolMaterial.REINFORCED_BLUE_GOLD,1.5f,-3.0f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_HOE = registerItem("reinforced_blue_gold_hoe",
             new ModHoeItem(ModToolMaterial.REINFORCED_BLUE_GOLD,-4,0,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
