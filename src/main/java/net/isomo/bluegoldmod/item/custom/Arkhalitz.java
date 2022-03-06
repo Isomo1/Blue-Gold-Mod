@@ -8,6 +8,7 @@ package net.isomo.bluegoldmod.item.custom;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap.Builder;
+import net.isomo.bluegoldmod.item.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
@@ -22,6 +23,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.text.Text;
@@ -46,12 +48,48 @@ public class Arkhalitz extends ToolItem {
         this.attributeModifiers = builder.build();
     }
 
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
-        //player.getAbilities().allowFlying = true;
-        player.playSound(SoundEvents.BLOCK_BEACON_ACTIVATE, 1.0f, 1.0f);
-        player.getItemCooldownManager().set(this, 100);
-        return TypedActionResult.success(player.getStackInHand(hand));
+    @Override
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+        if (entity instanceof PlayerEntity player) {
+            if(!player.isCreative()) {
+                if (player.getMainHandStack() != null && player.getMainHandStack().getItem() == ModItems.ARKHALITZ) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 100,0,false,false));
+                    player.getAbilities().allowFlying = true;
+                } else if (player.getOffHandStack() != null && player.getOffHandStack().getItem() == ModItems.ARKHALITZ) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 100,0,false,false));
+                    player.getAbilities().allowFlying = true;
+                } else if (!player.isOnGround() && player.getMainHandStack().getItem() != ModItems.ARKHALITZ) {
+                    player.getAbilities().flying = false;
+                } else if (!player.isOnGround() && player.getOffHandStack().getItem() != ModItems.ARKHALITZ) {
+                    player.getAbilities().flying = false;
+                }else{
+                    player.getAbilities().allowFlying = false;
+                }
+            }
+        }
+    }
 
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
+        if(player.isSneaking()){
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 60,99999,false,false));
+            player.getStackInHand(hand).damage(1,player,p->p.sendToolBreakStatus(hand));
+            player.playSound(SoundEvents.BLOCK_AMETHYST_BLOCK_BREAK, 1.0f, 1.0f);
+            player.getItemCooldownManager().set(this, 1200);
+            return TypedActionResult.success(player.getStackInHand(hand));
+        }else{
+            ItemStack itemStack = player.getStackInHand(hand);
+            player.getStackInHand(hand).damage(1,player,p->p.sendToolBreakStatus(hand));
+            world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENTITY_ENDER_EYE_DEATH, SoundCategory.NEUTRAL, 0.6F, 1.0F);
+            player.getItemCooldownManager().set(this, 100);
+            if (!world.isClient) {
+                TeleportationEntity teleport = new TeleportationEntity(world, player);
+                teleport.setItem(itemStack);
+                teleport.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, 4.0F, 0.0F);
+                world.spawnEntity(teleport);
+                return TypedActionResult.success(itemStack, world.isClient());
+            }
+        }
+        return TypedActionResult.success(player.getStackInHand(hand));
     }
 
     @Override
@@ -62,12 +100,6 @@ public class Arkhalitz extends ToolItem {
             tooltip.add(new TranslatableText("item.bluegoldmod.arkhalitz.tooltip"));
         }
     }
-
-    @Override
-    public boolean hasGlint(ItemStack stack) {
-        return true;
-    }
-
 
     public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
         return !miner.isCreative();

@@ -4,13 +4,12 @@
   "version": "${version}",
 
   "name": "Blue Gold",
-  "description": "A mod that adds blue gold tools, armors and gadgets!",
+  "description": "A mod that adds Blue Gold tools, weapons, armors and gadgets!",
   "authors": [
     "Isomo (Coding + Sprites), DarkChar (Sprites)"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.reddit.com/user/Isoomo/"
   },
 
   "license": "MIT",

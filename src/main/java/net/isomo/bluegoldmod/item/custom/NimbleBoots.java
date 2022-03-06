@@ -40,7 +40,6 @@ public class NimbleBoots extends ArmorItem {
                 }
             }
         }
-
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 

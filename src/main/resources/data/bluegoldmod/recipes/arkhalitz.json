@@ -1,37 +1,31 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:netherite_sword"
-    },
-    {
-      "item": "minecraft:diamond_sword"
-    },
-    {
-      "item": "minecraft:iron_sword"
-    },
-    {
-      "item": "bluegoldmod:blue_gold_sword"
-    },
-    {
-      "item": "bluegoldmod:reinforced_blue_gold_sword"
-    },
-    {
-      "item": "minecraft:stone_sword"
-    },
-    {
-      "item": "minecraft:wooden_sword"
-    },
-    {
-      "item": "minecraft:golden_sword"
-    },
-    {
-      "item": "bluegoldmod:reinforced_blue_gold_block"
-    }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OYO",
+    "X#Z",
+    "OTO"
   ],
-
+  "key": {
+    "O": {
+      "item": "bluegoldmod:reinforced_blue_gold_block"
+    },
+    "Y": {
+      "item": "bluegoldmod:camouflage_device"
+    },
+    "X": {
+      "item": "bluegoldmod:safety_device"
+    },
+    "T": {
+      "item": "bluegoldmod:propulsion_device"
+    },
+    "Z": {
+      "item": "bluegoldmod:teleportation_device"
+    },
+    "#": {
+      "item": "bluegoldmod:reinforced_blue_gold_sword"
+    }
+  },
   "result": {
-    "item": "bluegoldmod:arkhalitz",
-    "count": 1
+    "item": "bluegoldmod:arkhalitz"
   }
 }

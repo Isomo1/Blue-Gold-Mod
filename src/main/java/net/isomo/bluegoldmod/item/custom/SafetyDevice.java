@@ -19,14 +19,13 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class SafetyDevice extends Item {
-    public SafetyDevice(Settings settings) {super(settings);
-    }
+    public SafetyDevice(Settings settings) {super(settings);}
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20,99999,false,false));
+        player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 60,99999,false,false));
         player.getStackInHand(hand).damage(1,player,p->p.sendToolBreakStatus(hand));
         player.playSound(SoundEvents.BLOCK_AMETHYST_BLOCK_BREAK, 1.0f, 1.0f);
-        player.getItemCooldownManager().set(this, 500);
+        player.getItemCooldownManager().set(this, 1800);
         return TypedActionResult.success(player.getStackInHand(hand));
     }
 

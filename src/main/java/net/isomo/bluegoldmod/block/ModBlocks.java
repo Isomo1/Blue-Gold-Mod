@@ -18,7 +18,7 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool().luminance(8)), ModItemGroup.BLUEGOLD);
 
     public static final Block REINFORCED_BLUE_GOLD_BLOCK = registerBlock("reinforced_blue_gold_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(7.0f).requiresTool().luminance(12)), ModItemGroup.BLUEGOLD);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(16.0f).requiresTool().luminance(12)), ModItemGroup.BLUEGOLD);
 
     private static Block registerBlock(String name, Block block, ItemGroup group){
         registerBlockItem(name,block,group);
