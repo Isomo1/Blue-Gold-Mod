@@ -13,8 +13,8 @@ public class BlueGoldMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModItems.registerModItems();
 		ModLootTableModifiers.modifyLootTables();
 	}
 }

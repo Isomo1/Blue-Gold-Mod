@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " YZ",
+    " XY",
+    "X  "
+  ],
+  "key": {
+    "X": {
+      "tag": "c:iron_handle"
+    },
+    "Y": {
+      "item": "bluegoldmod:azure_glass_pieces"
+    },
+    "Z": {
+      "item": "bluegoldmod:essential_core"
+    }
+  },
+  "result": {
+    "item": "bluegoldmod:debuff_stick"
+  }
+}

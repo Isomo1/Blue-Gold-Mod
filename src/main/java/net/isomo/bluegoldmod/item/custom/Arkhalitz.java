@@ -47,6 +47,12 @@ public class Arkhalitz extends SwordItem {
                 }else{
                     player.getAbilities().allowFlying = false;
                 }
+            }else {
+                if (player.getMainHandStack() != null && player.getMainHandStack().getItem() == ModItems.ARKHALITZ) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 100,0,false,false));
+                } else if (player.getOffHandStack() != null && player.getOffHandStack().getItem() == ModItems.ARKHALITZ) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 100,0,false,false));
+                }
             }
         }
     }
@@ -82,6 +88,11 @@ public class Arkhalitz extends SwordItem {
     @Override
     public boolean canRepair(ItemStack stack, ItemStack ingredient) {
         return !super.canRepair(stack, ingredient);
+    }
+
+    @Override
+    public boolean isFireproof() {
+        return !super.isFireproof();
     }
 
     @Override

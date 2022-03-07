@@ -1,9 +1,7 @@
 package net.isomo.bluegoldmod.item.custom;
 
-
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -18,14 +16,24 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class SafetyDevice extends Item {
-    public SafetyDevice(Settings settings) {super(settings);}
+public class BlessedAmulet extends Item {
+    public BlessedAmulet(Settings settings) {
+        super(settings);
+    }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 60,99999,false,false));
+        player.removeStatusEffect(StatusEffects.WEAKNESS);
+        player.removeStatusEffect(StatusEffects.BLINDNESS);
+        player.removeStatusEffect(StatusEffects.NAUSEA);
+        player.removeStatusEffect(StatusEffects.WITHER);
+        player.removeStatusEffect(StatusEffects.INSTANT_DAMAGE);
+        player.removeStatusEffect(StatusEffects.SLOWNESS);
+        player.removeStatusEffect(StatusEffects.LEVITATION);
+        player.removeStatusEffect(StatusEffects.HUNGER);
+        player.removeStatusEffect(StatusEffects.POISON);
+        player.removeStatusEffect(StatusEffects.MINING_FATIGUE);
+        player.playSound(SoundEvents.BLOCK_GLASS_BREAK, 1.0f, 0.7f);
         player.getStackInHand(hand).damage(1,player,p->p.sendToolBreakStatus(hand));
-        player.playSound(SoundEvents.BLOCK_AMETHYST_BLOCK_BREAK, 1.0f, 1.0f);
-        player.getItemCooldownManager().set(this, 1800);
         return TypedActionResult.success(player.getStackInHand(hand));
     }
 
@@ -37,9 +45,9 @@ public class SafetyDevice extends Item {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
-            tooltip.add(new TranslatableText("item.bluegoldmod.safety_device.tooltip.shift"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.blessed_amulet.tooltip.shift"));
         }else{
-            tooltip.add(new TranslatableText("item.bluegoldmod.safety_device.tooltip"));
+            tooltip.add(new TranslatableText("item.bluegoldmod.blessed_amulet.tooltip"));
         }
     }
 }

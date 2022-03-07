@@ -52,14 +52,23 @@ public class ModItems {
     public static final Item PROPULSION_DEVICE = registerItem("propulsion_device",
             new PropulsionDevice(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(1000)));
 
-    public static final Item REINFORCED_BLUE_GOLD_INGOT = registerItem("reinforced_blue_gold_ingot",
-            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+    public static final Item DEBUFF_STICK = registerItem("debuff_stick",
+            new DebuffStick(ModToolMaterial.DEBUFF,0,1.0f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
+    public static final Item BLESSED_AMULET = registerItem("blessed_amulet",
+            new BlessedAmulet(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(1)));
+
+    public static final Item WINGED_HELMET = registerItem("winged_helmet",
+            new WingedHelmet(ModArmorMaterial.REINFORCED_BLUE_GOLD, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item ARKHALITZ = registerItem("arkhalitz",
             new Arkhalitz(ModToolMaterial.ARKHALITZ,48,-3.5f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(3561)));
 
+    public static final Item REINFORCED_BLUE_GOLD_INGOT = registerItem("reinforced_blue_gold_ingot",
+            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+
     public static final Item REINFORCED_BLUE_GOLD_SWORD = registerItem("reinforced_blue_gold_sword",
-            new ModSwordItem(ModToolMaterial.REINFORCED_BLUE_GOLD,12,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ModSwordItem(ModToolMaterial.REINFORCED_BLUE_GOLD,11,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_PICKAXE = registerItem("reinforced_blue_gold_pickaxe",
             new ModPickaxeItem(ModToolMaterial.REINFORCED_BLUE_GOLD,1,-2.8f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
@@ -71,7 +80,7 @@ public class ModItems {
             new ModShovelItem(ModToolMaterial.REINFORCED_BLUE_GOLD,1.5f,-3.0f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item REINFORCED_BLUE_GOLD_HOE = registerItem("reinforced_blue_gold_hoe",
-            new ModHoeItem(ModToolMaterial.REINFORCED_BLUE_GOLD,-4,0,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
+            new ModHoeItem(ModToolMaterial.REINFORCED_BLUE_GOLD,-4,0.0f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item BLUE_GOLD_SWORD = registerItem("blue_gold_sword",
             new SwordItem(ModToolMaterial.BLUE_GOLD,3,-2.4f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));

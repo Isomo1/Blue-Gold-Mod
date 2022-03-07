@@ -33,6 +33,11 @@ public class CamouflageDevice extends Item {
     }
 
     @Override
+    public boolean canRepair(ItemStack stack, ItemStack ingredient) {
+        return !super.canRepair(stack, ingredient);
+    }
+
+    @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
             tooltip.add(new TranslatableText("item.bluegoldmod.camouflage_device.tooltip.shift"));

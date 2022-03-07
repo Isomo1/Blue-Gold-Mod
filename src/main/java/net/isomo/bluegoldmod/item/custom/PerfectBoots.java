@@ -61,6 +61,11 @@ public class PerfectBoots extends ArmorItem {
         return !boots.isEmpty();
     }
 
+    @Override
+    public boolean canRepair(ItemStack stack, ItemStack ingredient) {
+        return !super.canRepair(stack, ingredient);
+    }
+
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
         ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
         return boots.getMaterial() == material;

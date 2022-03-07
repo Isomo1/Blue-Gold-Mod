@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ZZZ",
+    "Z Z",
+    " X "
+  ],
+  "key": {
+    "Z": {
+      "tag": "c:leather_strips"
+    },
+    "X": {
+      "item": "bluegoldmod:essential_core"
+    }
+  },
+  "result": {
+    "item": "bluegoldmod:blessed_amulet"
+  }
+}

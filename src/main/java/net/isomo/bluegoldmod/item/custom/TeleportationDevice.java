@@ -37,6 +37,11 @@ public class TeleportationDevice extends Item {
     }
 
     @Override
+    public boolean canRepair(ItemStack stack, ItemStack ingredient) {
+        return !super.canRepair(stack, ingredient);
+    }
+
+    @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
             tooltip.add(new TranslatableText("item.bluegoldmod.teleportation_device.tooltip.shift"));
