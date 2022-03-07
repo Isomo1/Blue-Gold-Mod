@@ -67,7 +67,7 @@ public class UpgradedBoots extends ArmorItem {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 100,3,false,false));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 100,2,false,false));
         }
     }
 

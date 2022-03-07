@@ -1,10 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "bluegoldmod:nimble_boots"
+      "item": "minecraft:sword_essence"
     },
-    "title": "Quick Feet",
-    "description": "Acquire Nimble Leather Boots",
+    "title": "§dSoul Master",
+    "description": "Craft a Sword Essence",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true
@@ -17,7 +17,7 @@
         "items": [
           {
             "items": [
-              "bluegoldmod:nimble_boots"
+              "bluegoldmod:sword_essence"
 
             ]
           }

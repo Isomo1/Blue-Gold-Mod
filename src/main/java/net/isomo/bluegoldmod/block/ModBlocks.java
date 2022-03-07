@@ -14,11 +14,11 @@ import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
 
-    public static final Block BLUE_GOLD_BLOCK = registerBlock("blue_gold_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool().luminance(8)), ModItemGroup.BLUEGOLD);
-
     public static final Block REINFORCED_BLUE_GOLD_BLOCK = registerBlock("reinforced_blue_gold_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(21.0f).requiresTool().luminance(12)), ModItemGroup.BLUEGOLD);
+
+    public static final Block BLUE_GOLD_BLOCK = registerBlock("blue_gold_block",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool().luminance(8)), ModItemGroup.BLUEGOLD);
 
     private static Block registerBlock(String name, Block block, ItemGroup group){
         registerBlockItem(name,block,group);

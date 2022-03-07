@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bluegoldmod:blue_gold_sword"
+    },
+    {
+      "item": "bluegoldmod:reinforced_blue_gold_sword"
+    },
+    {
+      "item": "minecraft:golden_sword"
+    },
+    {
+      "item": "minecraft:iron_sword"
+    },
+    {
+      "item": "minecraft:diamond_sword"
+    },
+    {
+      "item": "minecraft:stone_sword"
+    },
+    {
+      "item": "minecraft:wooden_sword"
+    },
+    {
+      "item": "minecraft:netherite_sword"
+    },
+    {
+      "item": "bluegoldmod:conglomerate_of_souls"
+    }
+  ],
+
+  "result": {
+    "item": "bluegoldmod:sword_essence"
+  }
+}

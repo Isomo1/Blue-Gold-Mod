@@ -67,7 +67,7 @@ public class NimbleBoots extends ArmorItem {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 100,1,false,false));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 100,0,false,false));
         }
     }
 

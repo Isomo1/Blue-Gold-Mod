@@ -3,8 +3,8 @@
     "icon": {
       "item": "bluegoldmod:arkhalitz"
     },
-    "title": "§eArkhalitz",
-    "description": "§eReawaken Arkhalitz",
+    "title": "§dArkhalitz",
+    "description": "§4Reawaken Arkhalitz",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true

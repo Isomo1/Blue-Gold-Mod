@@ -42,7 +42,7 @@ public class DebuffStick extends SwordItem {
         target.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER,200,99,true,true),attacker);
         target.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON,200,99,true,true),attacker);
         target.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER,200,99,true,true),attacker);
-        target.addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE,200,0,true,true),attacker);
+        target.addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE,20,0,true,true),attacker);
         stack.damage(1,attacker,p->p.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
         return super.postHit(stack, target, attacker);
     }

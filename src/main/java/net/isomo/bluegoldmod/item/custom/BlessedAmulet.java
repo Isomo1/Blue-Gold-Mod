@@ -2,6 +2,7 @@ package net.isomo.bluegoldmod.item.custom;
 
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -22,16 +23,37 @@ public class BlessedAmulet extends Item {
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
-        player.removeStatusEffect(StatusEffects.WEAKNESS);
-        player.removeStatusEffect(StatusEffects.BLINDNESS);
-        player.removeStatusEffect(StatusEffects.NAUSEA);
-        player.removeStatusEffect(StatusEffects.WITHER);
-        player.removeStatusEffect(StatusEffects.INSTANT_DAMAGE);
-        player.removeStatusEffect(StatusEffects.SLOWNESS);
-        player.removeStatusEffect(StatusEffects.LEVITATION);
-        player.removeStatusEffect(StatusEffects.HUNGER);
-        player.removeStatusEffect(StatusEffects.POISON);
-        player.removeStatusEffect(StatusEffects.MINING_FATIGUE);
+        if(player.hasStatusEffect(StatusEffects.BLINDNESS)){
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 200,0,false,false));
+            player.removeStatusEffect(StatusEffects.BLINDNESS);
+        } else if(player.hasStatusEffect(StatusEffects.WEAKNESS)){
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 200,0,false,false));
+            player.removeStatusEffect(StatusEffects.WEAKNESS);
+        } else if(player.hasStatusEffect(StatusEffects.NAUSEA)){
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 200,0,false,false));
+            player.removeStatusEffect(StatusEffects.NAUSEA);
+        } else if(player.hasStatusEffect(StatusEffects.WITHER)){
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200,0,false,false));
+            player.removeStatusEffect(StatusEffects.WITHER);
+        } else if(player.hasStatusEffect(StatusEffects.INSTANT_DAMAGE)){
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 200,0,false,false));
+            player.removeStatusEffect(StatusEffects.INSTANT_DAMAGE);
+        } else if(player.hasStatusEffect(StatusEffects.SLOWNESS)){
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 200,0,false,false));
+            player.removeStatusEffect(StatusEffects.SLOWNESS);
+        } else if(player.hasStatusEffect(StatusEffects.LEVITATION)){
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 200,0,false,false));
+            player.removeStatusEffect(StatusEffects.LEVITATION);
+        } else if(player.hasStatusEffect(StatusEffects.HUNGER)){
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 200,0,false,false));
+            player.removeStatusEffect(StatusEffects.HUNGER);
+        } else if(player.hasStatusEffect(StatusEffects.POISON)){
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200,0,false,false));
+            player.removeStatusEffect(StatusEffects.POISON);
+        } else if(player.hasStatusEffect(StatusEffects.MINING_FATIGUE)){
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 200,0,false,false));
+            player.removeStatusEffect(StatusEffects.MINING_FATIGUE);
+        }
         player.playSound(SoundEvents.BLOCK_GLASS_BREAK, 1.0f, 0.7f);
         player.getStackInHand(hand).damage(1,player,p->p.sendToolBreakStatus(hand));
         return TypedActionResult.success(player.getStackInHand(hand));

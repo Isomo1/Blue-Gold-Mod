@@ -17,7 +17,7 @@ public enum ModToolMaterial implements ToolMaterial {
     ARKHALITZ(0, 4561, 0.0F, 5.0F, 0, () -> {
         return Ingredient.ofItems(ModItems.REINFORCED_BLUE_GOLD_INGOT);
     }),
-    DEBUFF(0, 1, 0.0F, 0.0F, 0, () -> {
+    DEBUFF(0, 10, 0.0F, 0.0F, 0, () -> {
         return Ingredient.ofItems(ModItems.REINFORCED_BLUE_GOLD_INGOT);
     });
 
