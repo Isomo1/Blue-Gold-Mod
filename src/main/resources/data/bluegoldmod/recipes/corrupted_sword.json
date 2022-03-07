@@ -26,11 +26,11 @@
       "item": "minecraft:netherite_sword"
     },
     {
-      "item": "bluegoldmod:conglomerate_of_souls"
+      "item": "bluegoldmod:corrupted_star"
     }
   ],
 
   "result": {
-    "item": "bluegoldmod:sword_essence"
+    "item": "bluegoldmod:corrupted_sword"
   }
 }

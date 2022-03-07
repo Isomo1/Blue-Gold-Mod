@@ -136,14 +136,14 @@ public class ModItems {
     public static final Item ARKHALITZ = registerItem("arkhalitz",
             new Arkhalitz(ModToolMaterial.ARKHALITZ,48,-3.5f,new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(3561)));
 
-    public static final Item SWORD_ESSENCE = registerItem("sword_essence",
+    public static final Item CORRUPTED_SWORD = registerItem("corrupted_sword",
+            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD).maxDamage(1)));
+
+    public static final Item CORRUPTED_STAR = registerItem("corrupted_star",
             new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
     public static final Item ABOMINATION_SOUL = registerItem("abomination_soul",
             new SoulItem(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
-
-    public static final Item CONGLOMERATE_OF_SOULS = registerItem("conglomerate_of_souls",
-            new Item(new FabricItemSettings().group(ModItemGroup.BLUEGOLD)));
 
 
 

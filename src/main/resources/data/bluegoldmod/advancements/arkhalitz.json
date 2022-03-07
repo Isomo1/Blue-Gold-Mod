@@ -4,7 +4,7 @@
       "item": "bluegoldmod:arkhalitz"
     },
     "title": "§dArkhalitz",
-    "description": "§4Reawaken Arkhalitz",
+    "description": "§4Reawaken Arkhalitz.",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true

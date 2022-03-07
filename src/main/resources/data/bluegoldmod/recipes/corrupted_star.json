@@ -1,19 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
+    "##Z",
     "#Y#",
-    "###"
+    "Z##"
   ],
   "key": {
     "#": {
       "item": "bluegoldmod:abomination_soul"
+    },
+    "Z": {
+      "item": "bluegoldmod:universal_core"
     },
     "Y": {
       "item": "minecraft:nether_star"
     }
   },
   "result": {
-    "item": "bluegoldmod:conglomerate_of_souls"
+    "item": "bluegoldmod:corrupted_star"
   }
 }
