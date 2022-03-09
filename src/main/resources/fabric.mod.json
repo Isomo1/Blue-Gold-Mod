@@ -4,12 +4,12 @@
   "version": "${version}",
 
   "name": "Blue Gold",
-  "description": "A mod that adds Blue Gold tools, weapons, armors and gadgets!",
+  "description": "A mod that adds Blue Gold tools, weapons, armor and gadgets!",
   "authors": [
     "Isomo (Coding + Sprites), DarkChar (Sprites)"
   ],
   "contact": {
-    "homepage": "https://www.reddit.com/user/Isoomo/"
+    "homepage": "https://www.curseforge.com/members/isomo_/projects/"
   },
 
   "license": "MIT",
