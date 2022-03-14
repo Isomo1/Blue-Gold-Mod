@@ -1,5 +1,6 @@
 package net.isomo.bluegoldmod.item.custom;
 
+import net.isomo.bluegoldmod.item.ModItems;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
@@ -14,7 +15,6 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-
 
 public class PerfectBoots extends ArmorItem {
     public PerfectBoots(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
@@ -43,15 +43,7 @@ public class PerfectBoots extends ArmorItem {
     }
 
     private void evaluateEffect(PlayerEntity player) {
-        ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
-        ArmorMaterial material = boots.getMaterial();
-        if(hasCorrectArmorOn(material, player)) {
-            negateFallDamage(player, material);
-        }
-    }
-
-    private void negateFallDamage(PlayerEntity player, ArmorMaterial material) {
-        if(hasCorrectArmorOn(material, player)) {
+        if(hasCorrectArmorOn(player)) {
             player.fallDistance = 0;
         }
     }
@@ -66,8 +58,16 @@ public class PerfectBoots extends ArmorItem {
         return !super.canRepair(stack, ingredient);
     }
 
-    private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-        ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
-        return boots.getMaterial() == material;
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return !super.isEnchantable(stack);
+    }
+
+    private boolean hasCorrectArmorOn(PlayerEntity player) {
+        if (player.getInventory().getArmorStack(0).getItem()==ModItems.PERFECT_BOOTS) {
+            return true;
+        }else{
+            return false;
+        }
     }
 }
