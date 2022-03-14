@@ -1,6 +1,7 @@
 package net.isomo.bluegoldmod.item.custom;
 
 
+import net.isomo.bluegoldmod.item.ModItems;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
@@ -22,16 +23,21 @@ public class PropulsionDevice extends Item {
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
-        player.setVelocity(player.getVelocity().x, 3, player.getVelocity().z);
-        player.getStackInHand(hand).damage(1,player,p->p.sendToolBreakStatus(hand));
-        player.playSound(SoundEvents.BLOCK_BEACON_ACTIVATE, 1.0f, 1.0f);
-        player.getItemCooldownManager().set(this, 100);
+        for(int i=0;i<=36;i++){
+            Item item = player.getInventory().getStack(i).getItem();
+            ItemStack stack = player.getInventory().getStack(i);
+            if(item == ModItems.DEVICE_BATTERY){
+                if (!player.getAbilities().creativeMode) {
+                    stack.decrement(1);
+                }
+                player.setVelocity(player.getVelocity().x, 3, player.getVelocity().z);
+                player.getStackInHand(hand).damage(1,player,p->p.sendToolBreakStatus(hand));
+                player.playSound(SoundEvents.BLOCK_BEACON_ACTIVATE, 1.0f, 1.0f);
+                player.getItemCooldownManager().set(this, 100);
+                return TypedActionResult.success(player.getStackInHand(hand));
+            }
+        }
         return TypedActionResult.success(player.getStackInHand(hand));
-    }
-
-    @Override
-    public boolean canRepair(ItemStack stack, ItemStack ingredient) {
-        return !super.canRepair(stack, ingredient);
     }
 
     @Override

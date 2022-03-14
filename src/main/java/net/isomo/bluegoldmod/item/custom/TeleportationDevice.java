@@ -1,6 +1,7 @@
 package net.isomo.bluegoldmod.item.custom;
 
 
+import net.isomo.bluegoldmod.item.ModItems;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,17 +24,27 @@ public class TeleportationDevice extends Item {
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
-        ItemStack itemStack = player.getStackInHand(hand);
-        player.getStackInHand(hand).damage(1,player,p->p.sendToolBreakStatus(hand));
-        world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENTITY_ENDER_EYE_DEATH, SoundCategory.NEUTRAL, 0.6F, 1.0F);
-        player.getItemCooldownManager().set(this, 100);
-        if (!world.isClient) {
-            TeleportationEntity teleport = new TeleportationEntity(world, player);
-            teleport.setItem(itemStack);
-            teleport.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, 4.0F, 0.0F);
-            world.spawnEntity(teleport);
+        for(int i=0;i<=36;i++){
+            Item item = player.getInventory().getStack(i).getItem();
+            ItemStack stack = player.getInventory().getStack(i);
+            if(item == ModItems.DEVICE_BATTERY){
+                if (!player.getAbilities().creativeMode) {
+                    stack.decrement(1);
+                }
+                ItemStack itemStack = player.getStackInHand(hand);
+                player.getStackInHand(hand).damage(1,player,p->p.sendToolBreakStatus(hand));
+                world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENTITY_ENDER_EYE_DEATH, SoundCategory.NEUTRAL, 0.6F, 1.0F);
+                player.getItemCooldownManager().set(this, 100);
+                if (!world.isClient) {
+                    TeleportationEntity teleport = new TeleportationEntity(world, player);
+                    teleport.setItem(itemStack);
+                    teleport.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, 4.0F, 0.0F);
+                    world.spawnEntity(teleport);
+                }
+                return TypedActionResult.success(itemStack, world.isClient());
+            }
         }
-        return TypedActionResult.success(itemStack, world.isClient());
+        return TypedActionResult.success(player.getStackInHand(hand));
     }
 
     @Override

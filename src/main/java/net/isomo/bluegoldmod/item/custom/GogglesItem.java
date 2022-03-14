@@ -68,7 +68,7 @@ public class GogglesItem extends ArmorItem {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 400,0,false,false));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 200,0,false,false));
         }
     }
 

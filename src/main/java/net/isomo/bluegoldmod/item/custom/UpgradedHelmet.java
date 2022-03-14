@@ -65,9 +65,8 @@ public class UpgradedHelmet extends ArmorItem {
     }
 
     private void addStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffect mapStatusEffect) {
-
         if(hasCorrectArmorOn(mapArmorMaterial, player)) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 300,0,false,false));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 240,0,false,false));
         }
     }
 
