@@ -1,2 +1,1 @@
-Made by: Isomo (Coding+Sprites), DarkChar (Sprites)
-
+Made by: Isomo (Coding+Textures), DarkChar (Textures)
